@@ -467,9 +467,6 @@ replaced by better technology, if there are good processes. To implement
 processes, and to implement the *right* changes, one needs good people. So, the
 CTO's priority should be first people, then processes and then technology.
 
-Successful CTOs seem to have great heads of engineering working with them.
-Often, they are emerging talent they have spotted and coached.
-
 Consider that winning sports teams are made up of talented individuals, who are
 coached and developed, and who work well together. It is not necessary to have
 the *best* athletes--they are too few and too expensive. *Good* talent will do
@@ -478,8 +475,11 @@ lookout for development opportunities. On the other hand, a group of
 individually highly talented athletes who can't play together won't win
 matches.
 
-While every CTO's style is different, there are some common themes amongst
-successful CTOs. They seem to pay attention to:
+Successful CTOs seem to have great heads of engineering working with them.
+Often, they are emerging talent they have spotted and coached.
+
+While every CTO's style of managing people is different, there are some common
+themes amongst successful CTOs. They seem to pay attention to:
 
  * *Motivating people.* Productive technology organizations seem to be full or
    highly motivated individuals, who feel their work is a mission. More
