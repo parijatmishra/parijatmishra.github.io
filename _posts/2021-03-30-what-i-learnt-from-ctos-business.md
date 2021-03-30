@@ -468,8 +468,7 @@ processes, and to implement the *right* changes, one needs good people. So, the
 CTO's priority should be first people, then processes and then technology.
 
 Successful CTOs seem to have great heads of engineering working with them.
-Often, they are emerging talent they have spotted and coached.  Rockstar CTOs
-who hire a medley of expensive rockstar talent don't seem to hang around long.
+Often, they are emerging talent they have spotted and coached.
 
 Consider that winning sports teams are made up of talented individuals, who are
 coached and developed, and who work well together. It is not necessary to have
