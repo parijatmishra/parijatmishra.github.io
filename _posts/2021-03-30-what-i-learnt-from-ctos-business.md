@@ -475,8 +475,9 @@ lookout for development opportunities. On the other hand, a group of
 individually highly talented athletes who can't play together won't win
 matches.
 
-Successful CTOs seem to have great heads of engineering working with them.
-Often, they are emerging talent they have spotted and coached.
+Successful CTOs seem to have great engineering managers working with them, to
+help them scale themselves. Often, they are emerging talent they have spotted
+and coached.
 
 While every CTO's style of managing people is different, there are some common
 themes amongst successful CTOs. They seem to pay attention to:
