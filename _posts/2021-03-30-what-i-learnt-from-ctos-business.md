@@ -11,15 +11,16 @@ operations, improve security and reliability, and use data and machine learning
 to improve customer satisfaction. While a few initiatives were taken up by our
 customers and we worked with them to implement them, several did not.
 
-The best reasons would be (a) we need to do this other thing first to be able to
-do what you suggest, and we are working on it; (b) the benefits of this does not
-outweigh the cost or risk to us. These are well thought out reasons and I am
-glad our customers are making decisions that are right for their business.
+The best reasons I've heard would be: (a) we need to do this other thing first
+to be able to do what you suggest, and we are working on it; (b) the benefits of
+this does not outweigh the cost or risk to us. These are well thought out
+reasons and I am glad many of our customers are making decisions that are right
+for their business. However, quite frequently, while our customer stakeholders
+agreed that our proposal made sense and should be done immediately, they were
+unable to do so.
 
 {% include figure.html url='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Redtrafficlight.svg/256px-Redtrafficlight.svg.png' description='Red Traffic Light. Unknown author, CC0, via Wikimedia Commons' %}
 
-However, quite frequently, while our customer stakeholders agreed that our
-proposal made sense and should be done immediately, they were unable to do so.
 I'd find senior technologists, including CTOs, say to us, "This is a good idea.
 We'd like to do it, but...". The reasons given were specific to the situation
 but generally fell into the following buckets:
@@ -30,23 +31,31 @@ but generally fell into the following buckets:
    Unfortunately the fires never seem to stop.
 
 Some CTOs seem to be frustrated by an inability to implement technical changes
-that they themselves believe in, and blame it on "business". However, I've had
-the good fortune to have met others who seem to be able to implement large
-scale, long running, technology initiatives successfully. I've heard several
-tips and tricks from them.
+that they themselves believe strongly in, and blame it on a seemingly ignorant
+"business". However, I've had the good fortune to have met others who seem to be
+able to implement large scale, long running technology initiatives successfully.
+I've heard several tips and tricks from them.
 
 I believe most CTOs are well-equipped to make technology decisions, but not
 every CTO pays attention to the non-technical aspects that successful CTOs seem
 to do. In this article, I try to group their tips and tricks into categories and
 patterns. In particular, I will talk about *only* non-technical aspects.
 
+You may have noticed the quoted term "business" above. Technology functions
+often think of themselves as the special "technology" function and everyone else
+as "business", as if they were somehow not part of the business. An analogy
+would be the hippopotamus in a zoo classifying every animal in the zoo as
+"thick-skinned water-loving animals" and "others". I have been very guilty of
+this before and I understand this is a tempting and easy attitude to adopt. It
+is, IMHO, unproductive and wrong.
+
 ## What is a CTO, anyway?
 
 {% include figure.html url='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Sitting_Bull.jpg/256px-Sitting_Bull.jpg' description='Sitting Bull. David Francis Barry, Public domain, via Wikimedia Commons' %}
 
 Before we begin, I believe some clarification about what I mean by "CTO" is
-required. Today, just about every startup, especially tech startups, have a CTO.
-It seems unimaginable (in some circles at least) to not have a CTO in a company.
+required. Today, just about every startup, especially tech startups, has a CTO.
+It seems unimaginable, in some circles at least, to not have a CTO in a company.
 However, this was not always the case. The CTO role was rare before the 2000s.
 Up until the 90s, organizations had titles like "Head of R&D", "Head of
 Engineering", "IT Director", and "Chief Information Officer". As the role of
@@ -57,9 +66,19 @@ Vogels, CTO of Amazon.com wrote [an article about the history of the CTO roles],
 and points to a paper giving a [classification quadrant]. Considering these,
 there are two dimensions I look at:
 
- * What is the rate of change of the companies' business model? *High*: technology decisions must be centralized for consistency and speed; the CTO will have greater execution power. *Low*: business units and lines can optimize their own operations over long, stable periods; the CTO will be an "influencer".
+ * What is the rate of change of the company's business model? *High*:
+   technology decisions that support the company's business model must be
+   centralized for consistency and speed; therefore, the CTO will have greater
+   execution power. *Low*: business units and lines can optimize their own
+   operations over long, stable periods; the CTO will be an "influencer".
 
- * What proportion of the companies' product (or service) is technology vs services. *High*: the company needs someone to look beyond the horizon for big changes in technology so as not to be blindsided; the CTO will primarily look "outwards" at trends in technology and industry. *Low*: the company needs someone to optimize technology; the CTO will look "inward" at operational aspects.
+ * What proportion of the company's product or service is captured via
+   technology vs something else. *High*: the company needs someone to look
+   beyond the horizon for big changes in technology so as not to be blindsided;
+   the CTO will primarily look "outwards" and "forwards" at trends in technology
+   and industry. *Low*: the company needs someone to optimize existing
+   technology more than adopt new technology; the CTO will look "inward" at
+   operational aspects.
 
 Based on where an organization stands on these two dimensions, I classify the
 CTO role into 4 models:
@@ -95,16 +114,16 @@ indirectly responsible for:
 While CTOs, of necessity, work mostly on and with technology, there are a few
 other things successful CTOs pay a lot of attention to:
 
-* Working with "Business": successful technology functions work hand in hand
-  with the non-technology functions. Engineers often refer to everyone else as
-  "business", and talk about "business decisions", as if they were somehow
-  separate from the business and had no role in such decisions. This is a shame.
-  Successful CTOs don't see things this way. They see themselves and their
-  function as an integral part of the organization.
+* Working with "business" (that term again): successful technology functions
+  work hand in hand with the non-technology functions. Engineers often refer to
+  everyone else as "business", and talk about "business decisions", as if they
+  were somehow separate from the business and had no role in such decisions.
+  This is a shame. Successful CTOs don't see things this way. They see
+  themselves and their function as an integral part of the organization.
 * Running technology "as a business": technology is not just software
   development, and software development is not just agile. Successful CTOs
-  understand that the basics of business--cost, results, contribution to
-  profitability, productivity--applies to the technology function just as to
+  understand that the basics of business---cost, results, contribution to
+  profitability, productivity---applies to the technology function just as to
   every one else. They see their function through a business lens, while
   respecting its unique characteristics.
 
@@ -143,18 +162,27 @@ connections. They are constantly learning about how other organizations see the
 landscape. They gain the right to do so by sharing their own learnings with
 others.
 
+Third, CTOs keep their nose to the ground. They do not just guide and coach, but
+also learn from their employees. They understand that those on the coalface are
+likely to be more conversant with new technologies and trends. They encourage
+their employees to think bigger and bring ideas to the surface. Not all the
+ideas are going to work out and many may be about doing the same thing better,
+but it is worth listening carefully for those 1% of ideas that will make a 100%
+difference.
+
 ### Money talks. Talk money.
 
 {% include figure.html url='https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Money-2180330_1920.jpg/512px-Money-2180330_1920.jpg' description='Money-2180330 1920. pixabay free images, CC BY-SA 4.0, via Wikimedia Commons' %}
-
-Every business function racks up expenses. Overall, their contribution leads to
-the company making money and profits. It is easy to see the contribution of some
-functions to the profit, but it is hard to see the contribution of tech.
 
 CEOs and CFOs explain to their board and investors how much money they plan to
 spend next year, or quarter, in terms of how this relates to growth or
 profitability. They get asked about the value of each function's cost and
 whether it can be reduced.
+
+Every business function racks up expenses. Overall, their contribution leads to
+the company making money and profits. It is easy to see the contribution of some
+functions to the profit, but it is often hard to see the contribution of
+technology.
 
 Most CTOs think, most of the time, that they are doing a heroic job with limited
 resources and budget. Most non-CTOs don't understand how tech spends money, and
@@ -220,7 +248,7 @@ never-ending stream of requests that are tactical, leaving no time for
 revolutionary improvements. They also complain about constrained resources and
 budgets and skills gaps. Conversely, their "business" counterparts are genuinely
 baffled by why technology takes too long to deliver and costs "so much". When
-technology breaks, they complain it does too often.
+technology breaks, they complain it does so too often.
 
 It is all too easy for these situations to devolve into an "us-vs-them"
 mentality. Later in the article, I will talk about ruthless prioritization as a
@@ -247,9 +275,15 @@ damage than they bring benefits in the long run. Their attitude may prevent
 novice engineers from asking questions and learning, and encourage people to
 hide their mistakes or capability gaps.
 
-Culture takes time and repetition to build and maintain. The CTO and the other
-CxOs need to consciously spend time on an ongoing basis to propagating and
-maintaining culture, not just by example, but being explicitly vocal about it.
+Culture takes time and repetition to build and maintain. The amount of time is
+usually under-estimated and undervalued. The CTO and the other CxOs need to
+consciously spend time on an ongoing basis to propagating and maintaining
+culture, by example and also being explicitly vocal about it. It is easy to be
+vocal about a principle and then not following it. Every individual CxO will
+forget to exemplify a principle or lose an opportunity to do so. The CxO suite
+must agree that espousing principles visibly is important, agree to call each
+other out, support each other, and be forgiving to each other on exemplifying
+their principles.
 
 ## Run Technology as a Business
 
@@ -269,46 +303,55 @@ most skilled person to do the work right now. However, this prevents the CTO
 from doing what they are meant to do and that no one else is in a position to
 do; it also hinders the development of the team.
 
-CTOs need to learn to set goals and performance expectations, and then let the
-team do the work. They have to let people make mistakes and learn from them.
-CTOs should refrain from stepping in to fill a skills gap; instead, they should
-work to fill the skills gap, by coaching or getting their teams required
-training. CTOs should be explaining the goals, clarifying what good looks like,
-and giving frequent, respectful, feedback when it falls short of expectations.
-The best CTOs find a good balance between only praising and only criticizing.
-Instead of praising absolute performance, they tend to talk about improvement
-(e.g. "the scrum velocity looks better this month than earlier"). They also
-point out room for improvement with empathy (e.g. "While the release velocity
-has increased, so has the rate of failed deployments. What is the cause? How can
-I help?").
+CTOs need to set goals and performance expectations, and then let the team do
+the work. They have to let people make mistakes and learn from them. CTOs should
+refrain from stepping in to fill a skills gap; instead, they should work to
+*identify and overcome* the skills gap, by coaching, getting their teams
+required training, and hiring new talent. Good hires rise to a challenge. CTOs
+should be explaining the goals, clarifying what good looks like, and giving
+frequent, respectful feedback when it falls short of expectations. The best CTOs
+find a good balance between only praising and only criticizing. Instead of
+praising absolute performance, they tend to talk about improvement (e.g. "the
+scrum velocity looks better this month than earlier"). They also point out room
+for improvement with empathy (e.g. "While the release velocity has increased, so
+has the rate of failed deployments. What is the cause? How can I help?").
 
 ### Dive Deep, Judiciously
 
-CTOs, fear losing touch with reality, and missing out on a developing crisis in
-the technology function. The best CTOs do *occasional* deep dives. They find a
-recurring problem, and go down layers to find the root cause. They do not stop
-with the first plausible reason that comes up but look at multiple possible
-reasons, and for each, ask *why*, over and over. This may end up with
-pair-programming with a developer for a while, or spend time debugging an
-infrastructure problem with your best systems engineer. The CTO then comes back
-up and makes technical decisions based on relatively hands-on knowledge. Of
-course, before making the decision, the CTO would have first formulated it as a
-hypotheses and checked-in with many team members and other stakeholders who'd be
-impacted by the decision, as a form of a "smoke test".
+CTOs fear losing touch with reality. Many were bitten by missing out on a
+developing crisis in their technology function. Therefore, new CTOs are often
+tempted to try to understand everything, and quickly find themselves
+overwhelmed.
+
+The best CTOs do *occasional* deep dives. They learn how to ask good questions
+and focus on *recurring*, not one-off, problems. Once, they find a recurring
+problem, they go down multiple layers and across organizational boundaries to
+find the root cause. They do not stop with the first plausible reason that comes
+up but look at multiple possible reasons, and for each, ask *why*, over and
+over. This may end up with pair-programming with a developer for a while, or
+spend time debugging an infrastructure problem with your best systems engineer.
+The CTO then comes back up and makes technical decisions based on relatively
+hands-on knowledge. Of course, before making the decision, the CTO would have
+first formulated it as a hypotheses and checked-in with many team members and
+other stakeholders who'd be impacted by the decision, as a form of a "smoke
+test".
 
 What remains more of an art rather than a science is to know which problems to
 go deep into and which to trust your team to solve. CTOs should focus on
-recurring problems where the surface cause is seems easy to solve, but remains
+recurring problems where the surface cause seems easy to solve, but remains
 unsolved for some reason. That indicates there is some underlying issue that
 your team cannot see or solve themselves.
 
 It may help to let the team know what you are doing, otherwise the team may feel
 that you are micro-managing in the worst possible way--randomly and
-inconsistently. A mentor CTO I had used to declare, loudly, "Hold on! Can I
+inconsistently. I had a mentor CTO who used to declare, loudly, "Hold on! Can I
 please try to solve this problem?" He had previously told his team that he would
 occasionally do that to stay sharp. They respected him the more for it, even
-though often it took longer for the engineers to explain the problem to the CTO,
-as the CTO would ask deceptively naive questions.
+though often it took longer for the engineers to explain the problem to the CTO
+than solve it themselves. The CTO would ask deceptively naive questions that
+would occasionally lead to an "a ha" moment, when the team had found a root
+cause for several issues or when they discovered the problem had a radically
+simpler, non-obvious solution.
 
 ### Look Outside to Gain Perspective
 
@@ -316,11 +359,15 @@ It is healthy for a technology organization to celebrate its good work and
 successes. Initially, there are plenty of challenges to solve and creating
 *anything* that *works* is already an achievement. The talent in the
 organization is also new and their diverse perspectives allow solutions to be
-evaluated from multiple angles. The teams and leaders celebrate successes, which
-is healthy. However, soon, the organization's perception of itself as doing a
-good job, and convergence of perspectives becomes a blind spot. In other words,
-the organization is in danger of evaluating it's competence and its product
-quality as higher than it really is.
+evaluated from multiple angles. The teams and leaders celebrate even small
+successes which keeps motivation high; the diversity of perspectives means they
+don't ignore problems or issues, or start believing that the successes being
+celebrated means things are perfect.
+
+However, soon, the organization's perception of itself as doing a good job, and
+convergence of perspectives as the team grows older, creates a blind spot. In
+other words, the organization is in danger of over-estimating it's competence
+and its product quality and under-estimating its issues and shortfalls.
 
 Successful CTOs touch base with paying customers as much as possible to get an
 objective evaluation of the quality of their product and speak to peers (not
@@ -391,12 +438,13 @@ metrics:
  * The "why" of the metric must be communicated and over-communicated. If people
    don't understand why a metric exists, the CTO may learn something from the
    metric but will find it difficult to get people to modify their behavior in
-   the right direction. CTOs repeat the message many times and ask for feedback.
-   They listen very carefully to situations where people are debating it's
-   definition or how it applies to them: those are signs the metric may need to
-   be refined or its scope should be narrowed. When people understand the intent
-   of the metric, they are likely to bring issues with the metric or the gap
-   between the metric and what its truly trying to represent to the CTO.
+   the right direction. Great CTOs repeat the "why" many times and ask for
+   feedback. They listen very carefully to situations where people are debating
+   a metric's definition or how it applies to them: those are signs the metric
+   may need to be refined or its scope should be narrowed. When people
+   understand the intent of the metric, they are likely to bring issues with the
+   metric or the gap between the metric and what it is truly trying to represent
+   to the CTO.
 
  * Review regularly. Actually look at the metric, and *visibly* use it to change
    priorities and make decisions. Use your regular management meetings to do so
@@ -410,21 +458,27 @@ metrics:
 
  * React to changes. If a metric is trending in the negative direction, do
    something. Do not accept face value explanations like "it looks bad, but
-   everything is under control". call a meeting to get to the root cause,
-   allocate time to new initiatives or projects, assign tasks and hold people
-   accountable, and review again.
+   everything is under control". Work to get to the root cause, allocate time to
+   new initiatives or projects, assign tasks and hold people accountable, and
+   review again. Or, if the metric is genuinely mis-leading, remove it. When
+   removing a metric, communicate clearly that the metric is being removed and
+   why.  This is also a good time to reflect on the reasons the metric was
+   chosen, why it did not work, and lessons learnt from the experience. Choosing
+   a metric that later did not prove useful is commonplace and part of learning;
+   there is no reason to be embarrassed about it.
 
  * Celebrate improvements. If a metric is moving in a positive direction, do
    something out of the ordinary. Not a difficult, expensive or complex thing.
-   Simple things like a shout-out, donuts for the team, lunch with the boss etc
-   will suffice. All it takes is some kind of recognition that the CTO has
-   noticed and acknowledges the work that went into improving the metric.
+   (Reserve those for actual outcomes.) Simple things like a shout-out, donuts
+   for the team, team lunch. All it takes is some kind of recognition that the
+   CTO has noticed and acknowledges the work that went into improving the
+   metric.
 
  * Be frugal with metrics. Introduce only one or two at any time. Let the team
    become comfortable with them. Relentlessly automate until it becomes
    effortless to measure and review. Relentlessly review until that metric
    becomes second nature to everyone. When you add a new metric, consider
-   killing an old one--explicitly.  Too many metrics leave little time to
+   dropping an old one, explicitly.  Too many metrics leave little time to
    discuss them in any depth, celebrate or react to, or sometimes even to
    remember their original intent.
 
@@ -437,14 +491,16 @@ priorities are. It does not help to achieve a low priority objective very well,
 when the CEO or CFO is desperately looking for meaningful--if
 imperfect--progress on a higher priority objective. Knowing what is high
 priority starts with understanding as much about the business as possible, and
-asking "What would be the impact of this?". The technology organization
-must take an active interest in the impact of their tasks and provide inputs
-into prioritization. If they don't, soon there will be a lot of priority 1
-tickets. At that point the technology function will have to prioritize anyway,
-and since they did not seek to understand the impact and priority upfront,
-sub-optimal heuristics like first-come-first-serve, whoever-shouts-loudest, or
-whatever-is-easiest will be used. These methods may not necessarily prioritize
-what the organization really needs.
+asking "What would be the impact of this?" for each request. The technology
+organization must take an active interest in the impact of their tasks and
+provide inputs into prioritization. If they don't, soon there will be a lot of
+"priority 1" tickets, where the requestor of each ticket genuinely believes
+their request is top priority. It is, for them. They can't all be done together,
+though, due to limited resources. At that point the technology function will
+have to prioritize anyway, and since they did not seek to understand the impact
+and priority upfront, sub-optimal heuristics like first-come-first-serve,
+whoever-shouts-loudest, or whatever-is-easiest will be used. These methods may
+not necessarily prioritize what the organization really needs.
 
 Successful CTOs also prioritize recurring problems. Not every problem is
 important enough to solve immediately. Two questions help to clarify the
