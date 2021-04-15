@@ -3,41 +3,129 @@ layout: post
 title: On Metrics
 ---
 
-The audience of this post is the technology leader who is thinking of using
-quantitative measurements (metrics) to drive organizational change or to improve
-the performance of individuals or teams. I am going to argue that there is
-widespread misunderstanding of when and how to use metrics. Using metrics to
-measure organizational performance and drive change is extremely dangerous. I
-summarize common issues that can arise when introducing metrics. I then offer
-advice on when one should introduce metrics and how to avoid the negative
-effects.
+The intended audience for this article is the business or technology leader who
+is considering using quantitative metrics to measure and improve the performance
+of their organization, teams and individuals.
 
-**Aside**: In a [previous blog article], I wrote how great CTOs use metrics
-judiciously to measure the health of a technology function and to drive change.
-I also cautioned readers about a problem with metrics. I wrote: "Establishing a
-metric and tasking a team to improve it gets people narrowly focused on
-improving the metric itself. This can inadvertently lead to *undesirable
-behavior*...". I realize now that my advice was badly written. First, my
-phrasing understates the danger of people focusing on improving a metric versus
-achieving the true objective. Second, this is not the only danger when using
-metrics.
+In a [previous blog article], I wrote how great CTOs use metrics judiciously to
+measure the health of a technology function and to drive change. I did add a
+word of caution to go along with it. I believe that I understated the potential
+problems with using metrics, and made it look like that it is easy to get them
+right. I believe my advice was badly written.
 
-An analogy would be that I wrote "If you go into this forest, you *might be*
-bitten by a *mosquito*", whereas I should have written "If you go into this
-forest, you *will be* attacked by *5 deadly animals*. Specifically, a bear, a
-lion, a python, a wild boar and a randomly selected poisonous animal. It is not
-certain what order they will attack in, or when they will attack. However, it is
-certain is that you will be attacked." See the difference? You may prepare for
-your post-prandial forest walk very differently depending on which sentence you
-read.
+An analogy for what I wrote would be "If you enter this forest, you *might be*
+bitten by a *mosquito*".
+
+I should have written something along the lines of "*When* you enter this
+forest, you *will be* attacked by *several deadly animals*. It is not certain
+what order they will attack in, or when they will attack. However, it is certain
+is that you will be attacked. You should prepare yourself by..."
+
+See the difference?
+
+So, with apologies for what I wrote earlier, I want to elaborate upon metrics in
+this article. I will try to persuade you that using metrics in the way described
+above is always dangerous and sometimes useful in a narrow context. I will
+describe the issues that will arise when you try to use metrics. Then, I will
+list the situations when metrics should be used, and what precautions to take
+when using them.
+
+## A Myth About Metrics
+
+An oft quoted saying is "[only] what gets measured, gets managed." With respect
+to running a business, the saying is interpreted as "if you want to change
+something, start my measuring it", or alternatively, "if you are not measuring
+some aspect of your business, you are not managing it." An implication is that
+one should metrics, a lot. The saying is sometimes attributed to [Peter
+Drucker], the great management guru ([e.g. 1][drucker-attrib-1], [e.g.
+2][drucker-attrib-2]). If Drucker said this, it must be wise and right.
+
+Sounds legit?
+
+Some people are not sure. There does not seem to be evidence that Drucker
+actually ever said this ([e.g.][drucker-noattrib]). More importantly, the phrase
+is misleading. The journalist [Simon Caulkin][caulkin-1], wrote:
+
+> If there's one management platitude that should have been throttled at birth,
+> it's 'what gets measured gets managed'. It's not that it's not true---it is---
+> but it is often misunderstood, with disastrous consequences.
+
+> The full proposition is: 'What gets measured gets managed - even when it's
+> pointless to measure and manage it, and even if it harms the purpose of the
+> organisation to do so.'
+
+Caulkin refers to this [paper][ridgway-1] from 1956, titled "Dysfunctional
+Consequences of Performance Measurements", which says:
+
+> There is today a strong tendency to state numerically as many as possible of
+> the variables with which management must deal. ... The cure is sometimes worse
+> than the disease.
+
+The paper warns against "indiscriminate use and undue confidence and reliance"
+on quantitative measures of performance, and cautions that "judicious use of a
+tool requires awareness of the full effects and consequences."
+
+## How Bad Can the Effects of Metrics Be?
+
+There are many dangers with using metrics. I will talk about them in a while,
+but first let us examine how bad can things be, if metrics are not used well.
+
+Let me describe just one of the issues with metrics here: *surrogation* or goal
+displacement. Metrics are often initially implemented to measure some aspect of
+a business, as a *partial* representation of progress towards an ultimate
+objective.  However, humans being humans, managers, teams and individuals have a
+tendency to focus on improving the metric itself rather than meeting the
+objective.  If you think this is the exception and rare, consider the cautionary
+articles above--they would not be writted if this was uncommon. But what about
+the consequences? Are they serious?
+
+An article from 2019 in the Harvard Business Review, titled "[Don't Let Metrics
+Undermine Your Business][hbr-2019-1]", the authors describe an extreme example
+of the consequences of surrogation at the bank [Wells Fargo][wells-fargo-1]. The
+authors of the paper write:
+
+> In other words, Wells Fargo had—--and still has—--a strategy of building
+> long-term customer relationships, and management intended to track the degree
+> to which it was accomplishing that goal by measuring cross-selling. With
+> brutal irony, a focus on the metric unraveled many of the bank’s valuable
+> long-term relationships.
+
+This is my summary of what happened:
+
+  * Wells Fargo has a *strategic focus* of long-term retail banking relationships;
+  * They already had a *metric* of *cross-sell*--when a customer buys one
+    product and the sales person is able to convince to buy more products. Of
+    course, this should only be done with the customers' interest at heart--the
+    customer must genuinely need, want and benefit from the additional product.
+  * Wells-Fargo decided to *align* the cross-sell *metric* with the *strategy*.
+  * Employees started believing that improving the cross-sell metric was meeting
+    a strategic goal. They acted, at a large scale and over a long period of
+    time, as if cross-selling *was* the strategy.
+  * To meet this "goal" under pressure, employees fradulently opened millions of
+    deposit and credit accounts without customer consent. Due to sales pressure
+    and a lack of desire to look under the hood of where the higher cross-sell
+    numbers were coming from and why, managers and senior leaders did not detect
+    fradulent behavior early.
+  * Since the misbehavior came to light, Wells-Fargo has had to spend billiions
+    on reimbursing customers, paying damaages and fines, and for litigation.
+    They've had regulatory limitations slapped on them. And, besides losing
+    money, the bank has also lost customer trust. Pretty consequential effects.
+
+The authors examine the underlying causes and conclude that the root cause was a
+pervasive culture of measuring performance by measurement of metrics. They caution:
+
+> The mental tendency to replace strategy with metrics can destroy company
+> value.
 
 ## The Perils of Metrics
 
-One of my favorite authors, [Mark Schwartz][schwartz-amzn], an IT leader and a
-"inveterate purveyor of lucubratory prose", cautions against metrics in his book
-[*The Delicate Art of Bureaucracy*][schwartz-bureaucracy]. In the chapter
-"Bureaucracies of Metrics", he points out several issues with the use of metrics
-and gives examples for each.
+[Mark Schwartz][schwartz-amzn], an IT leader and a "inveterate purveyor of
+lucubratory prose", writes about bureaucracy in his book [*The Delicate Art of
+Bureaucracy*][schwartz-bureaucracy]. In the chapter "Bureaucracies of Metrics",
+he points out several issues with the use of metrics and gives examples for
+each. Briefly, they are:
+
+  * *Inefficiency*: metrics have a cost associated with them
 
  * *Hidden Inefficiency.* There is a cost associated with not only gathering
    them, but then organizing them, reviewing them, and formulating action plans
@@ -139,7 +227,20 @@ and gives examples for each.
       based only on or designed to "improve" such metrics is dangerous and can
       be counter-productive to the actual objective.
 
-## Questions to Ask of Your Metrics
+## Using Metrics "Judiciously"
+
+### Fighting Surrogation
+
+Quoting the previously referenced paper in *Harvard Business Review*:
+
+> Nobel prize winner Daniel Kahneman and Yale professor Shane Frederick
+> postulate that three conditions are necessary to produce the type of
+> substitution we see with surrogation:
+>
+>   1. The objective or strategy is fairly abstract.
+>   2. The metric of the strategy is concrete and conspicuous.
+>   3. The employee accepts, at least subconsciously, the substitution of the metric for the strategy.
+
 
   * Is a metric worth the cost?
 
@@ -150,11 +251,16 @@ and gives examples for each.
   * Do you have a metric and an aggressive target but use it to motivate people to innovate instead of measuring their performance?
 
 [previous blog article]: {% post_url 2021-03-30-what-i-learnt-from-ctos-business %}
+[Peter Drucker]: https://en.wikipedia.org/wiki/Peter_Drucker
+[drucker-attrib-1]: https://www.resultsjunkies.com/revisiting-drucker-what-gets-measured-gets-managed/
+[drucker-attrib-2]: https://link.springer.com/chapter/10.1057/9781137375469_7
+[drucker-noattrib]: https://athinkingperson.com/2012/12/02/who-said-what-gets-measured-gets-managed/
+[caulkin-1]: https://www.theguardian.com/business/2008/feb/10/businesscomment1
+[ridgway-1]: https://www.jstor.org/stable/2390989?origin=crossref&seq=1
+[wells-fargo-1]: https://en.wikipedia.org/wiki/Wells_Fargo_account_fraud_scandal
+[hbr-2019-1]: https://hbr.org/2019/09/dont-let-metrics-undermine-your-business
 [schwartz-amzn]: https://www.amazon.com/Mark-Schwartz/e/B01AHGEC2I
 [schwartz-bureaucracy]: https://www.amazon.com/gp/product/B086XM4WCK/
 [measure-book]: https://www.amazon.com/Measure-What-Matters-Google-Foundation-ebook/dp/B078FZ9SYB/
-[drucker-1]: https://athinkingperson.com/2012/12/02/who-said-what-gets-measured-gets-managed/
-[drucker-2]: https://www.resultsjunkies.com/revisiting-drucker-what-gets-measured-gets-managed/
-[ness-1]:    https://nesslabs.com/what-gets-measured-gets-managed
-[caulkin-1]: https://www.theguardian.com/business/2008/feb/10/businesscomment1
+
 [selinger-1]: https://www.entrepreneur.com/article/237326
