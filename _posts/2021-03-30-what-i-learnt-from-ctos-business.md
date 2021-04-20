@@ -366,7 +366,7 @@ celebrated means things are perfect.
 
 However, soon, the organization's perception of itself as doing a good job, and
 convergence of perspectives as the team grows older, creates a blind spot. In
-other words, the organization is in danger of over-estimating it's competence
+other words, the organization is in danger of over-estimating its competence
 and its product quality and under-estimating its issues and shortfalls.
 
 Successful CTOs touch base with paying customers as much as possible to get an
