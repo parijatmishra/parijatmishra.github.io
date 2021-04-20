@@ -1,37 +1,160 @@
 ---
 layout: post
-title: On Metrics
+title: On Using Metrics Judiciously
 ---
+
+## Introduction
 
 The intended audience for this article is the business or technology leader who
 is considering using quantitative metrics to measure and improve the performance
-of their organization, teams and individuals.
+of their organization, teams and individuals, or, putting it another way, bring
+about positive change in business outcomes using systems of human work.
+
+This article does not address using technical metrics in technical systems
+(e.g., using metrics like request throughput and latency, or CPU and RAM
+utilisation).  If you are looking for advice on what to monitor in technology
+systems and what to do about your measurements, this is not the right article.
+
+## Caveats--Things You Should Know About Me
+
+Caveat #1: I consider myself to be an IT "leader in development". By leader, I
+mean someone who rallies people, with or without formal authority, because they
+believe in something and have something to say. By leader, I do not mean that I
+know everything, or I know it better than you. I write to share, in the hope
+that it will be useful. I do not mean to tell you what to do. If I seem to be
+doing that, it is a stylistic effect and not the intent; stop anytime and ask:
+"is this true?"
+
+Caveat #2: I am going to share anecdotes from my experience. I do not, even
+inadvertently, want to disclose information that is confidential. I will
+therefore, write my anecdotes by using analogies.  For this article, imagine: IT
+is like building houses; I work for a supplier of parts and tools which enables
+anyone to build their own house--be it a little cabin, multi-storey mansion, or
+a skyscraper. The stoe is self-service and anyone can stroll into our store and
+buy what they want.  The store is incredibly varied: there's a huge (and
+growing) choice for everything one may want in a house. Not every buyer knows
+what to buy.  My role is to advise buyers, and would-be buyers, on what they
+should buy and assemble together, to build what they want.  Some buyers want the
+choices made for them, preferring to hire contractors who will design and then
+buy.  Others want to buy directly and build on their own.  A few want
+contractors to build, but want to do the buying themselves.
+
+## Context
 
 In a [previous blog article], I wrote how great CTOs use metrics judiciously to
 measure the health of a technology function and to drive change. On re-reading,
 I believe while I did not say anything incorrect *per se*, I did write it badly.
-I understated the potential problems with using metrics, and made it look like
+I *understated* the potential problems with using metrics, and made it look like
 that it is easy to get them right.
 
-An analogy for what I wrote would be "If you enter this forest, you *might be*
-bitten by a *mosquito*".
+An analogy for what I wrote would be "*If* you enter this forest, you *might be*
+bitten by a *mosquito*". I should have written something more along the lines of
+"*When* you enter this forest, you *will be* attacked by *several deadly
+animals*." See the difference?
 
-I should have written something more along the lines of "*When* you enter this
-forest, you *will be* attacked by *several deadly animals*. It is not certain
-what order they will attack in, or when they will attack. However, it is certain
-is that you will be attacked. You should prepare yourself by..."
-
-See the difference?
+Aside: I had this realization after reading the book [*The Delicate Art of
+Bureaucracy*][schwartz-bureaucracy] by one of my favorite authors, Mark
+Schwartz, where he devoted an entire chapter to *The Bureacracies of Metrics*. I
+highly recommend picking up the book if you are a technology or business leader
+in an organization that is growing large, or if you just landed in a large one.
+Schwartz is a veteran IT leader, and though he describes himself as an
+"inveterate purveyor of lucubratory prose" I don't find his prose lucubratory at
+all.
 
 So, with apologies for what I wrote earlier, I want to elaborate upon metrics in
 this article.
 
-I will try to persuade you that while metrics are sometimes useful, metric
-fixation is always dangerous. I will describe the issues that will arise when
-you try to use metrics. Then, I will list the situations when metrics should be
-used, and what precautions to take when using them.
 
-## Some History
+
+In the rest of the article, I will try to:
+
+- **Warn ourselves**: list common objectives behind using metrics for performance
+  management, so we can identify them ourselves, whether we are about to create
+  a metric or have been given one;
+- **Arm ourselves**: debunk some mythis about why people think quantitative
+  metrics are a good way to achieve their objectives so we (I?) don't end up
+  doing the wrong things for the right reasons;
+- **Scare ourselves**: list the various ways metrics can go wrong and cause
+  lasting damage, instead of meeting our objectives, so we do not end up causing
+  harm instead of creating a benefit;
+- **Motivate**: give some examples where metrics work well and why;
+- **Enable**: create a checklist, maybe the beginning of an algorithm, to use
+  metrics without falling into the pits of, well, their pitfalls.
+
+## Why Use Metrics?
+
+TODO:
+- Motivations - Warn you
+  - DONE: Complexity
+  - Low-trust of human judgment
+  - Human biases
+  - Information sharing
+- Myths - Arm you
+  - What gets measured, gets managed
+  - What gets meaured, gets done
+  - If you can not measure it, you can not improve it
+- Core Problems
+
+Metrrics (and associated targets) are often created without a discussion of why
+a metric had to be created in the first place.  In this section I will explore a
+few common reasons organisations and leaders look to quantitative metrics.  If
+you know the motive, you will be better positioned to ask if the metric is going
+to meet the underlying motivation.
+
+### Using Standardized Metrics to Tame Complexity
+
+One motivation is for leaders to understand and improve the performance of a
+complex organization. This can happen when (a) a new external business or
+technology leader has just landed in a large organization, with many functions,
+product, geographies, or market segments; (b) an internal leader leading one
+function is now leading a larger team of many functions; (c) an internal leader
+leading a function in a particular geography or market segment has now taken
+over a larger geography or multiple market segments.
+
+The organization will have multiple functions, geographies or market segments.
+For convenience, let's call them "business units". The leaders challenge is that
+each business unit creates different kinds of value, and has different inputs,
+outputs and processes.  Sometimes business units nominally doing the same
+function in different geographies will work differently.
+
+The leader is faced with a lot of complexity. Understanding the unique nature of
+each business unit is hard work and consumes time. Each unit seems to have its
+own language. At a very high level, a business unit consumes some inputs, has
+some internal processes, and produces some outputs.  When faced with the
+diversity of inputs and outputs between business units, a leader is tempted to
+"standardize" them somehow to be able to compare the performance of different
+units and find out where they should focus their time and effort on to improve
+global performance.
+
+The leader may decide that standardized metrics of performance can make their
+job easier.  Imposing standardization where an acceptable standard does not
+exist leads to problems of oversimplications and rewarding luck.
+
+I will write later why standardization almost always loses valuable context that
+makes the metric useless. If you are a leader of a diverse organisation, and
+don't have the time or knowledge to understand each deepely, instead of imposing
+"standard" or uniform metrics for performance, it is preferable to rely on
+experience and knowledge based judgment of the leaders of each function.
+
+### Increasing Confindence in Low-Trust Functions
+
+In most orgnisations, there are some functions whose value few people
+understand. This happens when the functions are needed for external, not
+internal, needs (e.g. the "Risk and Compliance" functions in regulated
+organisations); or when the functions are highly specialiazed (e.g. "Legal").
+When most business stakeholders do not understand the value they bring to the
+table. there are increasing calls to measure their value and contriution versus
+their costs.e
+
+### TODO: Metrics vs Data
+
+- Data: exploratory
+- Metrics: information
+- Metrics: diagnostic
+- Metrics: control
+
+## Review: Myths about Metrics
+
 
 A quote [attributed to Lord
 Kelvin](https://thefutureorganization.com/lord-kelvin-on-measurement/) from 1883
@@ -46,22 +169,31 @@ goes like this:
 
 Lord Kelvin was writing about *Electrical Units of Measurement*. He did not say
 there is *no* knowledge without numbers, but that numerical measurement brings
-*more* knowledge.
-
-Somehow, over the centuries, this got distorted into the idea that the *only*
-knowledge that matters is that which can be measured numerically.  In 1956, V.F.
-Ridgway wrote in [an article in Administrative Science Quarterly][ridgway-1]
-about the *Dysfunctional Consequences of Performance Measurements*:
+*more* knowledge. Over the centuries, the idea got repeated and embedded into
+things that were not electrical in nature.  Apparently, people were doing this a
+lot because in 1956, V.F. Ridgway wrote [an article in Administrative Science
+Quarterly][ridgway-1]:
 
 > There is today a strong tendency to state numerically as many as possible of
 > the variables with which management must deal.... This has led to the
 > development of quantitative performance measurements for all levels within
 > organizations,...
-> 
+
+This should be good, right? If more people are using quantitative measurements
+for performance, as Lord Kelvin said, their knowledge should no longer be meagre
+and unsatisfactory and should be approaching Science. For some reason, Ridgway
+was not happy and went on to write:
+
 > Quantitative measures of performance are tools,... Judicious use of a tool
 > requires awareness of possible side effects and reactions.  Otherwise,
 > indiscriminate use may result in side effects and reactions outweighing the
 > benefits...The cure is sometimes worse than the disease.
+
+As you can see, the author was not positive about quantitative measurements.  In
+fact, the title of the article was: *Dysfunctional Consequences of Performance
+Measurements*. I wonder if he did well in maths in school.
+
+Let's look elsewhere.
 
 An oft quoted saying is "[only] what gets measured, gets managed." The saying is
 sometimes attributed to [Peter Drucker], the great management guru ([e.g.
@@ -70,14 +202,17 @@ is "What Gets Measured Gets Done", [attributed to Tom Peters][tom-peters-1986]
 from 1986.
 
 If Drucker said this, it must be wise and right, right?  Some people are not
-sure. There does not seem to be evidence that Drucker actually ever said this
-([e.g.][drucker-noattrib]). More importantly, the phrase as quoted is
-misleading. The journalist [Simon Caulkin][caulkin-1], referring to Ridgway's
+happy and insist that there's no evidence that Drucker actually ever said this
+([e.g.][drucker-noattrib]). And some people are not happy on general principle.
+For e.g., the journalist [Simon Caulkin][caulkin-1], referring to Ridgway's
 article and other sources, wrote:
 
 > If there's one management platitude that should have been throttled at birth,
 > it's 'what gets measured gets managed'. It's not that it's not true---it is---
 > but it is **often misunderstood, with disastrous consequences.**
+
+That's a bit extreme, don't you think?  I mean, maybe Drucker did not say this,
+but that doesn't make the saying wrong.  Sadly, Simon has more to say:
 
 > The full proposition is: 'What gets measured gets managed - even when it's
 > pointless to measure and manage it, and even if it harms the purpose of the
@@ -87,6 +222,12 @@ At this point, we should be skeptical. As Lord Kelvin said, being able to
 express some quantity numerically adds to our knowledge. So how can measuring
 something be pointless? Even if we assume that some numbers could be pointless,
 how could their existence harm the purpose of the organization?
+
+(E.g.: We could find the tensile strengths of a specimen of my cranial hair,
+assuming you could find said speciment.  It would be a number.  If someone could
+be bothered to measure it, it would be very scientific, because I assume some
+scientific instruments would be required to do so.  But it may not be very
+pointy---I mean, it would be pointless. (Is "pointy" an antonym of pointless?))
 
 How can using numbers have "side effects and reactions"?  Perhaps it is not the
 numbers themselves but how we used them in the past?  Surely we are wiser now.
@@ -101,9 +242,10 @@ Metrics*][tyranny-metrics]. [Mark Schwartz][schwartz], an IT leader and author
 of several books on technology leadership, devoted an entire chapter titled
 *Bureaucracies of Metrics* in his book [The Delicate Art of
 Bureaucracy][schwartz-bureaucracy]. These are just two of many examples of
-warnings about using metrics.
+warnings about using metrics. I stopped looking for more, because I got, well,
+depressed.
 
-## The Curious Case of The Metric Replacing The Strategy
+### The Curious Case of The Metric Replacing The Strategy
 
 Are the warnings merited?  How bad can things get, even if it were possible to
 somehow misuse our humble servant, the number?  Perhaps the authors are
@@ -112,36 +254,27 @@ over-reacting.
 In an article from 2019 in the Harvard Business Review, titled [*Don't Let
 Metrics Undermine Your Business*][hbr-2019-1], the authors describe an extreme
 example of the consequences of surrogation at the bank [Wells
-Fargo][wells-fargo-1]. The authors of the paper write:
-
-> In other words, Wells Fargo had—--and still has—--a strategy of building
-> long-term customer relationships, and management intended to track the degree
-> to which it was accomplishing that goal by measuring cross-selling. With
-> brutal irony, a focus on the metric unraveled many of the bank’s valuable
-> long-term relationships.
-
-This is my summary of what happened: Wells Fargo had and continues to have a
-*strategy* of building long-term retail banking relationships with customers.
-They already had a *metric* for cross-selling activities. Wells-Fargo decided to
-*align* the *metric* with the *strategy*. Unfortunately, employees started
-acting, at a large scale and over a long period of time, as if cross-selling
-*was* the strategy. To meet this non-existent "strategic goal", employees
-*fraudulently* opened millions of deposit and credit accounts without customer
-consent. For some reason, managers and senior leaders did not detect that the
-increasing number of accounts from so-called "cross-selling" were created in a
-fraudulent manner. Initially, when some customer complained about fees and
-charges related to accounts they had never consented to creating, or unexpected
-credit cards and mortgages they did not sign up to, the incidents were blamed on
-a few, over-zealous employees; no one thought to check whether this was a
-wide-spread occurrence.
-
-Since the misbehavior came to light, Wells Fargo has had to spend billions on
-reimbursing customers, paying damages and fines, and for litigation. Regulators
-stopped them from growing their assets for a while (meaning, Wells Fargo could
-not get new business, even legitimately, while they continued to pay damages and
-fines). And, besides losing money, the bank has also lost customer trust: the
-issue came to light in 2016, and the bank is reporting a fall in new customer
-sign-ups even in 2021. The damage to the bank has been extensive and persistent.
+Fargo][wells-fargo-1]. This is my summary of what happened: Wells Fargo had and
+continues to have a *strategy* of building long-term retail banking
+relationships with customers. They already had a *metric* for cross-selling
+activities. Wells-Fargo decided to *align* the *metric* with the *strategy*.
+Unfortunately, employees started acting, at a large scale and over a long period
+of time, as if cross-selling *was* the strategy. To meet this non-existent
+"strategic goal", employees *fraudulently* opened millions of deposit and credit
+accounts without customer consent. For some reason, managers and senior leaders
+did not detect that the increasing number of accounts from so-called
+"cross-selling" were created in a fraudulent manner. Initially, when some
+customer complained about fees and charges related to accounts they had never
+consented to creating, or unexpected credit cards and mortgages they did not
+sign up to, the incidents were blamed on a few, over-zealous employees; no one
+thought to check whether this was a wide-spread occurrence. Since the
+misbehavior came to light, Wells Fargo has had to spend billions on reimbursing
+customers, paying damages and fines, and for litigation. Regulators stopped them
+from growing their assets for a while (meaning, Wells Fargo could not get new
+business, even legitimately, while they continued to pay damages and fines).
+And, besides losing money, the bank has also lost customer trust: the issue came
+to light in 2016, and the bank is reporting a fall in new customer sign-ups even
+in 2021. The damage to the bank has been extensive and persistent.
 
 The authors examine the underlying causes and conclude that the root cause was a
 pervasive culture of measuring performance by measurement of metrics. Further,
@@ -156,171 +289,91 @@ actual goal, as far as people's behavior is concerned.  Okay, maybe this is not
 isolated, and it could happen to you.  You will not let metrics replace
 strategy. Problem solved.
 
-Are we done? Are there other problems?  You bet.
+Are we done? There aren't any other problems with using metrics, are there?
 
 ## The Perils of Metrics
 
-As you can see, warnings against overuse or misuse
-Muller, who I quoted above, gives a list of the various problems that can arise
-when trying to use metrics.
 
-  1. People tend to measure what is more easily measurable at the cost of
-     measuring what is truly important (but is difficult to measure).
-  2. People tend to measure only one or two aspects of an outcome that is
-     complex and multi-dimensional, again because it is easier to do so.
-  3. 
+3.1 Information Distortion
 
-[Mark Schwartz][schwartz-amzn], an IT leader and a "inveterate purveyor of
-lucubratory prose", writes about bureaucracy in his book [*The Delicate Art of
-Bureaucracy*][schwartz-bureaucracy]. In the chapter *Bureaucracies of Metrics*,
-he points out several issues with "metric fixation" and gives examples for each.
+- Easily measurable even it is not valuable
+- Simple measures for complex problems
+- Measuring inputs rather than outcomes
+- Inappropriate standardization
+- Over-simplifcation
+    - Incorrect conclusions
 
-(*I highly recommend reading the whole book, and other books from Mark, as Mark
-writes insightfully and humorously on topics relevant to technology leaders.*)
+3.2 Gaming
 
-An over reliance on metrics leads to:
+Goodheart's law
 
-  1. **Surrogation**, or **Goal Displacement.** Metrics are often confused with
-     objectives, with very bad consequences.
-  1. **Inefficiency.** Widespread use of metrics is surprisingly inefficient.
-  1. **Calcification.** Metrics can prevent people from innovating and
-     experimenting.
-  1. **Over-confidence.** Metrics can lead to people ignoring other relevant
-     information.
-  1. **Over-simplification.** A tendency of humans to simplify metrics more than
-     is scientifically tenable, resulting in incorrect conclusions.
-  1. **Recklessness.** There is a tendency to believe that if a metric exists,
-     it must be "improved", without considering its context.
-  1. **Robotization.** People dislike their multi-dimensional contributions
-     being measured only by a smattering of metrics, or their performance being
-     reduced to a number or score.
+- Creaming
+- Omission of data
+- Lowering standards
+- Gaming, cheating
 
-### TODO: Surrogation
+3.3 Orgnisational Cost
 
-### TODO: Inefficiency
+- Goal displacement
+- Short-termism
+- Cost in time, effort, people
+- Diminishing returns
+- Knee-jerk reactions
 
-### TODO: Calcification
+3.3 Human Cost
 
-### TODO: Over confidence
-
-... incorrect conclusions
-
-### TODO: Recklessness
-
-... knee-jerk tendency to improve the metric
-
-### TODO: Robotization
+- Rule cascades due to bad actors - impact on good performers and rule followers
+- Rewarding luck
+- Discouraging risk-taking
+- Discouraging innovation
+- Discouraging co-operating, teamwork
+- Anti "purpose" - degrading quality of work
 
 
-  * *Stifling Innovation.* In theory, the existence of a metric does not prevent
-    teams and individuals from doing things that are innovative. In practice,
-    metrics make this harder. Consider the two cases:
+## Benefits of Metrics
 
-    * An employee is doing something whose effects will be captured by a metric.
-      Let's assume that the target for that metric is reasonable and
-      extrapolated from past performance. In this case, the incentive to
-      innovate (that is, do things radically differently) is low. The best
-      strategy to do more of what was already being done. There can be
-      improvements in productivity and efficiency, but one should not expect
-      people to be thinking out of the box. Innovation is risky and may fail.
-      Trying something innovative may cause a temporary dip in a metric. Someone
-      who fears missing their target and knows failure will not be rewarded has
-      no incentive to try something new and different.
-    
-    * An employee is trying to do something whose results will not be captured
-      in any metric they are accountable for. Are they motivated to do so? Do
-      they believe they will get recognition for it? Do leaders have time to
-      talk about innovations or are they buried under mountains of
-      pre-determined metrics?
+- Illustrative: Amazon, Bezos: Website load time, Advertisements
+- Diagnostic: Provonost, ???? personal experience?
+- TOOD: look at amazon builder's library
 
-  * *Creation of Blind Spots*. We are tempted to choose metrics that are easy to
-    measure even if they are less informative or relevant over metrics that may
-    be harder to measure but closer to what we care about. This constant
-    temptation leads to an increasing amount of time being devoted to work whose
-    outcomes are easily measured over work whose outcomes are hard to measure or
-    cannot be measured. Pretty soon organizations start ignoring important work
-    that takes a great deal of effort to justify. All is well for a while as the
-    metrics are looking good, when suddenly the organization is blindsided by a
-    crisis.
-  
-  * *Treating People as Robots.* This is especially true when (a) meeting metric
-    targets is used to evaluate people's performance, and (b) when performance
-    evaluation is presented as a metric.
-    
-    * (a) A metric-target based performance evaluation system is supposed to
-      bring about fairness and objectivity in large organizations. However,
-      because of all the issues above, a metric is less than faithful
-      representation of the value of people's work. Hence, in most cases,
-      measuring someone's performance by only looking at whether they hit their
-      targets (or even making this the dominant criteria) is not really fair. It
-      *could* be objective if not fair, but only in those cases where it is
-      impossible for anyone to game the metric and the metrics are a
-      comprehensive, total, reflection of value. Are there any such cases?
-    
-    * (b) In some organizations, employees are given a precise-looking score or
-      grade as part of their performance appraisal. This almost always leads to
-      questions like "why did I get a score of X and not Y", "how did you arrive
-      at this score". What the employees really want to know is two things: (a)
-      am I doing well overall against expectations; (b) what am I doing well,
-      and which areas should I improve in. Good managers should be addressing
-      these topics with their employees.  If they are doing so, the precise
-      score is irrelevant. Performance scores or grades only serve to make
-      people feel as if they are not people but a piece of machinery.
-  
-  * *Over-simplification.* As organizations grow larger, it becomes harder for
-    leaders to understand everything in full detail, and metrics are created to
-    provide a summary.  These metrics are a necessarily simplified
-    representation of the state of affairs. They can give directional
-    information about where things are going. When making everyday decisions,
-    over-simplified metrics are less useful. Two problems occur when people try
-    to make everyday decisions based on simplified metrics that are easy to
-    convey, but do not tell the full story.
+WIP: How to Measure Anything
 
-    * The first problem is a tendency for people get hypnotized by the metric
-      itself and jump to the conclusion that it must be "improved" without
-      looking deeper into it. This happens because simplified metrics come
-      without surrounding context in which to interpret them. An aggravating
-      factor is when someone is "accountable" but "responsible" for a metric.
-      This could happen in the context of a project or program where a program
-      manager is looking at the metrics and presenting them to senior
-      leadership, but is not the one doing the actual work that could change the
-      metric. In such cases, there is a temptation to try to "improve the
-      metric" and this can be counter-productive unless the context for the
-      metric has been somehow obtained (by picking "old timers" brains, for
-      e.g.).
+- Concept of measurement -- approximation -- is this useful?
 
-    * The second problem is a metric that has been over-simplified to the point
-      where it is meaningless or misleading. For e.g., the average of a set of
-      scores is used very widely because it is simple to calculate and present.
-      There are many situations where the average is not the right aggregation
-      and it is not telling you what you *think* it should be. Taking actions
-      based only on or designed to "improve" such metrics is dangerous and can
-      be counter-productive to the actual objective.
+"Although this may seem a paradox, all exact science is based on the idea of
+approximation. If a man tells you he knows a thing exactly, then you can be safe
+in inferring that you are speaking to an inexact man." -- Bertrand Russell,
+British mathematician and philosopher.
 
-## Using Metrics "Judiciously"
+## How to Use Metrics
 
-### Fighting Surrogation
-
-Quoting the previously referenced paper in *Harvard Business Review*:
-
-> Nobel prize winner Daniel Kahneman and Yale professor Shane Frederick
-> postulate that three conditions are necessary to produce the type of
-> substitution we see with surrogation:
->
->   1. The objective or strategy is fairly abstract.
->   2. The metric of the strategy is concrete and conspicuous.
->   3. The employee accepts, at least subconsciously, the substitution of the metric for the strategy.
+Use metrics to augment experience and knowledge based judgement, not replace it.
+Don't use metrics to avoid understanding the nature of something.
 
 
-  * Is a metric worth the cost?
+Then (Muller):
+- What kind of information? Inanimate or human?
+- How useful is it?
+- Are more metrics more useful?
+- Are there alternative metrics? Is a new standardized metric needed? What would be the cost of *not* using the standardized metric?
+- What is the cost of collecting it? Is it higher than the benefit (useful)?
+- Who will interpret (what is the purpose)? The purpose is always that someone will use this metric to make a decision
+    - Are they capable of interpreting the metric?
+    - Is this a performance and pay related metric and should it be used in this way?
+- If you are being asked for a metric
+    - Why?
+    - Who developed the metric and how?
+    - Will this be gamed?
+    - Do people know why?
+    - Is it aligned to people's sense of mission/professional ethic?
 
-  * Are you examining the ultimate objective and not just the metric?
+## Conclusion
 
-  * Are your employees motivated to do things that are right but not captured in a metric? How do you know?
-  
-  * Do you have a metric and an aggressive target but use it to motivate people to innovate instead of measuring their performance?
+
 
 [previous blog article]: {% post_url 2021-03-30-what-i-learnt-from-ctos-business %}
+[schwartz]: https://www.amazon.com/Mark-Schwartz/e/B01AHGEC2I
+[schwartz-bureaucracy]: https://www.amazon.com/gp/product/B086XM4WCK/
 [muller-1]: https://history.catholic.edu/faculty-and-research/faculty-profiles/muller-jerry/index.html
 [tyranny-metrics]: https://www.amazon.com/Tyranny-Metrics-Jerry-Z-Muller/dp/0691191913/
 [Peter Drucker]: https://en.wikipedia.org/wiki/Peter_Drucker
@@ -332,8 +385,7 @@ Quoting the previously referenced paper in *Harvard Business Review*:
 [ridgway-1]: https://www.jstor.org/stable/2390989?origin=crossref&seq=1
 [wells-fargo-1]: https://en.wikipedia.org/wiki/Wells_Fargo_account_fraud_scandal
 [hbr-2019-1]: https://hbr.org/2019/09/dont-let-metrics-undermine-your-business
-[schwartz]: https://www.amazon.com/Mark-Schwartz/e/B01AHGEC2I
-[schwartz-bureaucracy]: https://www.amazon.com/gp/product/B086XM4WCK/
+
 [measure-book]: https://www.amazon.com/Measure-What-Matters-Google-Foundation-ebook/dp/B078FZ9SYB/
 
 [selinger-1]: https://www.entrepreneur.com/article/237326
