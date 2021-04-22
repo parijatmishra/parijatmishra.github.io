@@ -7,45 +7,31 @@ title: On Using Metrics Judiciously
 
 The intended audience for this article is the business or technology leader who
 is considering using quantitative metrics to measure and improve the performance
-of their organization, teams and individuals, or, putting it another way, bring
-about positive change in business outcomes using systems of human work.
+of their organization, groups, teams or individuals. This article is not about
+using technical metrics to improve technology systems (e.g., using metrics like
+request throughput and latency, or CPU and RAM utilisation to monitor system or
+application performance).
 
-This article does not address using technical metrics in technical systems
-(e.g., using metrics like request throughput and latency, or CPU and RAM
-utilisation).  If you are looking for advice on what to monitor in technology
-systems and what to do about your measurements, this is not the right article.
+By "metrics", I do not mean raw data; I refer to things that are
+quantitative--either cardinal or ordinal--that are used to measure the
+performance of something. One man's metric is another man's data--it depends on
+the context.  What is important is how the quantitative data is intended to be
+used.
 
-## Caveats--Things You Should Know About Me
-
-Caveat #1: I consider myself to be an IT "leader in development". By leader, I
-mean someone who rallies people, with or without formal authority, because they
-believe in something and have something to say. By leader, I do not mean that I
-know everything, or I know it better than you. I write to share, in the hope
-that it will be useful. I do not mean to tell you what to do. If I seem to be
-doing that, it is a stylistic effect and not the intent; stop anytime and ask:
-"is this true?"
-
-Caveat #2: I am going to share anecdotes from my experience. I do not, even
-inadvertently, want to disclose information that is confidential. I will
-therefore, write my anecdotes by using analogies.  For this article, imagine: IT
-is like building houses; I work for a supplier of parts and tools which enables
-anyone to build their own house--be it a little cabin, multi-storey mansion, or
-a skyscraper. The stoe is self-service and anyone can stroll into our store and
-buy what they want.  The store is incredibly varied: there's a huge (and
-growing) choice for everything one may want in a house. Not every buyer knows
-what to buy.  My role is to advise buyers, and would-be buyers, on what they
-should buy and assemble together, to build what they want.  Some buyers want the
-choices made for them, preferring to hire contractors who will design and then
-buy.  Others want to buy directly and build on their own.  A few want
-contractors to build, but want to do the buying themselves.
+To put it in conrete terms: imagine you have a number of engineering teams (some
+infra and ops oriented, some application development oriented).  They all work
+off a work tracking system, like Jira.  The Jira tickets themselves and
+associated metadata about them are just data.  If you now take some data like
+"tickets cloed per week" or "average duration tickets are open" and use them to
+*measure* something, I call that a "metric".
 
 ## Context
 
 In a [previous blog article], I wrote how great CTOs use metrics judiciously to
 measure the health of a technology function and to drive change. On re-reading,
-I believe while I did not say anything incorrect *per se*, I did write it badly.
-I *understated* the potential problems with using metrics, and made it look like
-that it is easy to get them right.
+I believe while I did not say anything incorrect *per se*, I understated the
+potential problems with using metrics, and made it look like that it is easy to
+get them right.
 
 An analogy for what I wrote would be "*If* you enter this forest, you *might be*
 bitten by a *mosquito*". I should have written something more along the lines of
@@ -59,37 +45,31 @@ highly recommend picking up the book if you are a technology or business leader
 in an organization that is growing large, or if you just landed in a large one.
 Schwartz is a veteran IT leader, and though he describes himself as an
 "inveterate purveyor of lucubratory prose" I don't find his prose lucubratory at
-all.
+all. I find it humorous, light, yet insightful. *J'accuse* Mark, *j'accuse*!
 
 So, with apologies for what I wrote earlier, I want to elaborate upon metrics in
-this article.
+this article, mostly to educate myself, and partly in the hope it will be
+useful.  In the rest of the article, I will try to:
 
-
-
-In the rest of the article, I will try to:
-
-- **Warn ourselves**: list common objectives behind using metrics for performance
-  management, so we can identify them ourselves, whether we are about to create
-  a metric or have been given one;
-- **Arm ourselves**: debunk some mythis about why people think quantitative
-  metrics are a good way to achieve their objectives so we (I?) don't end up
-  doing the wrong things for the right reasons;
-- **Scare ourselves**: list the various ways metrics can go wrong and cause
-  lasting damage, instead of meeting our objectives, so we do not end up causing
-  harm instead of creating a benefit;
-- **Motivate**: give some examples where metrics work well and why;
-- **Enable**: create a checklist, maybe the beginning of an algorithm, to use
-  metrics without falling into the pits of, well, their pitfalls.
+- **Warm you** up with an understanding of common motivations behind
+  introducing metrics for performance management;
+- **Warn you** about some myths about quantitative metrics so we don't end
+  up doing the wrong things for the right reasons;
+- **Alarm you** about the lasting damage incorrectly applied metrics could
+  do so we are careful when using them next time;
+- **Calm you** by examining the (few) scenarios where we will really need metrics;
+- **Arm you** with a checklist of questions to ask and check if there are better
+  ways of achieving our objectives, before reaching out for a metric.
 
 ## Why Use Metrics?
 
 TODO:
-- Motivations - Warn you
+- Motivations
   - DONE: Complexity
-  - Low-trust of human judgment
-  - Human biases
+  - DONE: Low-trust of human judgment
+  - Overcoming Human biases
   - Information sharing
-- Myths - Arm you
+- Myths
   - What gets measured, gets managed
   - What gets meaured, gets done
   - If you can not measure it, you can not improve it
@@ -98,53 +78,102 @@ TODO:
 Metrrics (and associated targets) are often created without a discussion of why
 a metric had to be created in the first place.  In this section I will explore a
 few common reasons organisations and leaders look to quantitative metrics.  If
-you know the motive, you will be better positioned to ask if the metric is going
-to meet the underlying motivation.
+you know the likely motive, you will be better positioned to ask if the metric
+is going to meet the underlying motivation.
 
-### Using Standardized Metrics to Tame Complexity
+### Taming Complexity
 
-One motivation is for leaders to understand and improve the performance of a
-complex organization. This can happen when (a) a new external business or
-technology leader has just landed in a large organization, with many functions,
-product, geographies, or market segments; (b) an internal leader leading one
-function is now leading a larger team of many functions; (c) an internal leader
-leading a function in a particular geography or market segment has now taken
-over a larger geography or multiple market segments.
+Consider these situations: (a) a new external business or technology leader has
+just landed in a large organization, with many functions, product, geographies,
+or market segments; (b) an internal leader leading one function is now leading a
+larger team of many functions; (c) an internal leader leading a function in a
+particular geography or market segment has now taken over a larger geography or
+multiple market segments.
 
 The organization will have multiple functions, geographies or market segments.
 For convenience, let's call them "business units". The leaders challenge is that
 each business unit creates different kinds of value, and has different inputs,
 outputs and processes.  Sometimes business units nominally doing the same
-function in different geographies will work differently.
+function in different geographies will work differently. The leader is faced
+with a lot of complexity. Understanding the unique nature of each business unit
+is hard work and consumes time. How is the leader going to measure and improve
+the performance of these units? Each unit seems to have its own language. Even
+units which seem to have the same mission and function--e.g., different
+application development teams--seem to be speaking in tongues, when the
+beleaguered leader tries to fathom what they do.
 
-The leader is faced with a lot of complexity. Understanding the unique nature of
-each business unit is hard work and consumes time. Each unit seems to have its
-own language. At a very high level, a business unit consumes some inputs, has
-some internal processes, and produces some outputs.  When faced with the
-diversity of inputs and outputs between business units, a leader is tempted to
-"standardize" them somehow to be able to compare the performance of different
-units and find out where they should focus their time and effort on to improve
-global performance.
+The leader may decide that, at least for similar looking groups or teams,
+standardized metrics of performance can make their job easier.  The leader finds
+or invents lowest common denominator inputs, activities and outputs across them.
+E.g., for application development teams: number of user stories completed in a
+time period (or more sophisticatedly user *story points* per period, aka sprint
+velocity). Sometimes the metrics become quite abstract in a valiant effort to
+measure very different activities with a standardized metric. E.g.,
+"value/person/month" where productivity is usually some notional dollar-value,
+laboriously calculated with shaky assumptions.
 
-The leader may decide that standardized metrics of performance can make their
-job easier.  Imposing standardization where an acceptable standard does not
-exist leads to problems of oversimplications and rewarding luck.
+*(I speak from personal experience. I tried to do this last year. It was an
+ignominious failure. The only thing I am proud of was that I acknowledged the
+hare-brained thing for what it was, eventually. I apologise to my team members
+who bemusedly tried to cooperate with me.)*
 
-I will write later why standardization almost always loses valuable context that
-makes the metric useless. If you are a leader of a diverse organisation, and
-don't have the time or knowledge to understand each deepely, instead of imposing
-"standard" or uniform metrics for performance, it is preferable to rely on
-experience and knowledge based judgment of the leaders of each function.
+Standardization of metrics almost always loses valuable local context and
+encourages measuring everyone with the same yardstick when their circumstances
+may be different.  Even when leaders acknowledge that two team are dealing with
+somewhat different situations, human beings being human, there is a great
+temptation to start a conversation with "why is your metric X much lower than
+that other team?" The team now needs to explain that, well, things are
+different. Sometimes a team may not even know about that other team's
+circumstances, which makes the explanation more difficult and tempts the team to
+clutch at straws. At best this wastes time re-explaining something that is
+already known; at worst, people give up trying to explain and meet the yardstick
+via *gaming* the metric, which I will elaborate on later.
 
-### Increasing Confindence in Low-Trust Functions
+### Substituting Human Judgment
 
 In most orgnisations, there are some functions whose value few people
-understand. This happens when the functions are needed for external, not
-internal, needs (e.g. the "Risk and Compliance" functions in regulated
-organisations); or when the functions are highly specialiazed (e.g. "Legal").
-When most business stakeholders do not understand the value they bring to the
-table. there are increasing calls to measure their value and contriution versus
-their costs.e
+understand. This can happen, for instance, when the functions are needed for
+external and not internal needs (e.g. the "Risk and Compliance" functions in
+regulated organisations); or when the functions are highly specialiazed (e.g.
+"Legal"). When most business stakeholders do not understand what a function does
+and how it does it, and trust between groups is low such that they are blaming
+others when they are not achieving their objectives, calls to measure the
+functions' contributions increase. The person accountable for a function may opt
+for using simple quantitative metrics to expose its contributions or
+performance, over the exhausting alternative of educating others on the value of
+the functio.
+
+This may not work as I described in the section "Money Talks!" in my [previous
+blog article]. In such cases, metrics are needed. Your only recourse is to not
+make them onerous on your team and distract them from creating value.
+
+It is preferable that leaders and stakeholders either understand the function,
+or have reliable and trustworthy leaders to lead that function so they don't
+have to.  It is even better to have a culture where if function A has a problem
+with function B, the team members of A feel it necessary and normal to have a
+conversation with the team B quickly, try to reconcile their objectives,
+discover if there are gaps in understanding, try to resolve them by increasing
+understanding if possible, and bring any irreconciliable differences to their
+leaders. Sometimes, dependent teams have goals that are mis-aligned, leading to
+friction. Mis-alignment in self-determined processes can be fixed by the teams
+themselves if their goals are aligned (or they can seek advice on the right
+compromise from leaders). Mis-alignment in *goals* is always the team's common
+leader's problem and responsibility (their job is to design an organisation with
+functions or business units that are workinng harmoniously, after all).  The
+common leader should not allow themselves to get away with using metrics to
+paper over such problems.
+
+In some cases, there are functions whose goals, or at least KPIs, are
+*deliberately* not aligned. This can be necessary for implementing
+checks-and-balances.  In such situations, it is necessary to explain the
+reasoning behind this repeatedly and constantly over implementing superficial
+performance metrics to demonstrate that the dependee function is satisfying the
+goals of the dependent function. **TODO**
+
+**TODO: personal anecdote -- SA goals vs Sales goals**
+
+### Metrics to Offset Human Biases and Blind Spots
+
 
 ### TODO: Metrics vs Data
 
