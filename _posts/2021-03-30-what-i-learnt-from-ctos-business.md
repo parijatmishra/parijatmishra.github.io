@@ -3,13 +3,19 @@ layout: post
 title: What Great CTOs do Beyond Technology
 ---
 
-I have been working with organizations to help them adopt cloud computing for a
-little more than 7 years now. I was reflecting on what my team and I had
-achieved in 2020. I observed a few things that were surprising. Over the year we
-had proposed to our customers several initiatives to reduce the cost of
-operations, improve security and reliability, and use data and machine learning
-to improve customer satisfaction. While a few initiatives were taken up by our
-customers and we worked with them to implement them, several did not.
+This article is aimed at new technical leaders of large or growing organization,
+who are looking to expand their leadership and functional skills beyond a
+mastery of technology.  I have been working with organizations to help them
+adopt cloud computing for a little more than 7 years now. I was reflecting on
+what my team and I had achieved in 2020. I observed a few things that were
+surprising. Over the year we had proposed to our customers several initiatives
+to reduce the cost of operations, improve security and reliability, and use data
+and machine learning to improve customer satisfaction. While a few initiatives
+were taken up by our customers and we worked with them to implement them,
+several did not. The reasons for an initiative to fail or succeed had very often
+little to do with technology. In this article I want to explore what I learnt
+from the technical leaders of successful organizations and initiatives, about
+things that don't have anything to do with technology.
 
 The best reasons I've heard would be: (a) we need to do this other thing first
 to be able to do what you suggest, and we are working on it; (b) the benefits of
