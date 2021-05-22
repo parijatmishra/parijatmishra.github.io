@@ -10,21 +10,30 @@ tools but, when applied to human work, can easily cause lasting and deep damage.
 This article's purpose is to help the reader use metrics usefully, and be able
 to identify and avoid their pitfalls.
 
+I was inspired to write this article after reading the books [*The Delicate Art
+of Bureaucracy*][schwartz-bureaucracy] by [Mark Schwartz][schwartz] and [*The
+Tyranny of Metrics*][tyranny-metrics] by [Jerry Muller][muller-1]. While I draw
+from these sources, I do think I have a novel mental model for thinking about
+the pitfalls of metrics and avoiding them.
+
+## Why This Article?
+
 In a [previous blog article], I wrote how great CTOs use metrics judiciously to
-measure the health of a technology function and to drive change. On re-reading,
-I believe while I did not say anything incorrect *per se*, I understated the
-potential problems with using metrics, and made it look like that it is easy to
-get them right. An analogy for what I wrote would be "If you enter this forest,
-you **might be** bitten by a **mosquito**". I should have written something more
-along the lines of "If you enter this forest, you **will be** attacked by
-**several deadly animals**." See the difference?
+measure the health of a technology function and to drive change. I believe I did
+not say anything incorrect *per se*, but I grossly understated the potential
+problems with using metrics. I implied it is easy to get them right. They are
+not. An analogy for what I wrote would be "If you enter this forest, you **might
+be** bitten by a **mosquito**". I should have written something more along the
+lines of "If you enter this forest, you **will be** attacked by **several deadly
+animals**." See the difference? A would be forest-enterer would be quite within
+their rights to be angry to have seen the former warning and not the latter
+(assuming they survided).
 
 There are powerful and seductive calls to use metrics more widely and deeply.
 Proponents of metrics highlight successful applications. Failures, if discussed
-at all, are attributed to generic "mis-management" or a failure of execution.
-What is not highlighted are there are more ways to use metrics incorrectly than
-productively. While there are cautionary tales and examples of metrics gone
-amok, they conclude with "don't use metrics this way", or "just be careful".
+at all, are often attributed to generic "mis-management" or a failure of
+execution. While there are cautionary tales and examples of metrics gone amok,
+they conclude with "don't use metrics this way", or "just be careful".
 *Systematic* guidance on avoiding the pitfalls of metrics is sparse. 
 
 This article tries to synthesize information from many sources and present them
@@ -42,12 +51,7 @@ I will be using the term "group" very broadly to refer to all kinds of
 organizational units: departments, specialist functions, cross-functional teams,
 etc. I will also use the terms "accuracy" and "precision" distinctly, as
 described [here][accuracy-good] (the [Wikipedia definition][accuracy-wiki] is
-useless).
-
-**Aside**: I was inspired to write this article after reading the books [*The
-Delicate Art of Bureaucracy*][schwartz-bureaucracy] by [Mark Schwartz][schwartz]
-and [*The Tyranny of Metrics*][tyranny-metrics] by [Jerry Muller][muller-1].
-While I draw from these sources, all mistakes are mine.
+defined in satistics terms and is too technical for my purposes).
 
 ## Why Use Metrics?
 
@@ -303,7 +307,7 @@ judgment of the people who are at the coal face.
 If management persists with the idea that OKRs are the only good way to run an
 organization, they will try to expand the scope of objectives and results and
 bring more work under the ambit of metrics. In his book, *The Delicate Art of
-Bureaucracy*, Mark Schwartz quotes another author:
+Bureaucracy*, Mark Schwartz writes (paraphrasing another author):
 
 > Although Google became famous for its “20% time,” by which employees were
 > encouraged to spend one day a week working on new ideas outside their normal
@@ -345,6 +349,8 @@ analysis][keystone2], Pronovost wrote (highlights mine):
 > **ongoing monitoring and feedback of performance** were important in sustaining
 > results.
 
+Daily goals sheets, ongoing monitoring and performance feedback sound like many
+organizational metric and target driven performance management practices.
 However, Pronovost also wrote (highlights mine):
 
 > The Keystone ICU project demonstrated the potential of **voluntary efforts**
@@ -413,16 +419,17 @@ data:
 
 For clarity, I will be using some terms with the following meanings:
 
- * A **metric** is a numerical measurement of some aspect of work. By itself, it
-   is devoid of a judgment of value. For e.g., let's consider a software
-   development team that is practicing an agile development methodology called
-   Scrum. Scrum teams measure their work in terms of *story points*.  During a
-   fixed time-internal, called *sprint*, the team attempts to do as much work as
-   possible without compromising quality. The amount of work done, measured in
-   story points completed per sprint, is called *sprint velocity*. Let's say
-   that a team finds average sprint velocity was 40 story points last month. By
-   itself, this metric is neither good nor bad. It just tells the state of
-   affairs.
+ * A **metric** is a numerical measurement of some data, and for the purposes of
+   this article, data on some aspect of work and performance of people. By
+   itself, it is devoid of a judgment of value. For e.g., let's consider a
+   software development team that is practicing an agile development methodology
+   called Scrum. Scrum teams measure their work in terms of *story points*.
+   During a fixed time-internal, called *sprint*, the team attempts to do as
+   much work as possible without compromising quality. The amount of work done,
+   measured in story points completed per sprint, is called *sprint velocity*.
+   Let's say that a team finds average sprint velocity was 40 story points last
+   month. By itself, this metric is neither good nor bad. It just tells the
+   state of affairs.
  * A **target** is some value for a metric that is considered good.  Let's say
    our software development team feels they could do more work. They set
    themselves a target to raise their sprint velocity from 40 to 45 story
@@ -796,13 +803,14 @@ A sales person who has already met the goal for a particular quarter is tempted
 to slow an ongoing deal to the next quarter instead of closing it as quickly as
 possible.
 
-**Avoiding the Pitfall.** The first remedy is to not make goals high-stakes but
-informational. An environment where metrics are thought of providing information
-and not to be used to reward or punish will be one where there is less
-temptation to distort metrics. The second remedy, where the goal is indeed
-high-stakes, is to not impose the metric and goal but to motivate those who will
-actually do the work to adopt the goal as a mission. This is what Pronovost did
-in the Keystone Initiative that I wrote about above. 
+**Avoiding the Pitfall.** There is no way to avoid this pitfall if goals are
+high-stakes, as Campbell's Law states. The first remedy is to not make goals
+high-stakes but informational. An environment where metrics are thought of
+providing information and not to be used to reward or punish will be one where
+there is less temptation to distort metrics. The second remedy, where the goal
+is indeed high-stakes, is to not impose the metric and goal but to motivate
+those who will actually do the work to adopt the goal as a mission. This is what
+Pronovost did in the Keystone Initiative that I wrote about above. 
 
 ## Pitfalls in Reporting
 
@@ -859,14 +867,17 @@ Reports show aggregates of individual values---count, sum, average, standard
 deviation---as precise numbers. The problem is, some aggregates are misleading.
 
 **Example.** The sales group at at a particular organization looks at the metric
-of *average deal size*. The intuition is that larger deals are a better use of
-time than doing several small deals. The problem is that a few large deals can
-move the average up significantly, and make the metric look better superficially
-even when the majority of the deals are small. What is required is metrics like
-median, 75th and 90th percentile that give some idea about the distribution of
-deals. Even a median as a starting point would prevent a single large deal from
-skewing the metric. Since the BI tool does not provide that, it is easier to
-stick to a misleading metric.
+of *average deal size* of open deals. The intuition is that larger deals are a
+better use of time than doing several small deals. The problem is that a few
+large deals or even a single large deal can move the average up significantly,
+and make the metric look better superficially even when the majority of the
+deals are small. Once the large deal is closed, the average drops significantly,
+prompting questions and un-necessary digging into past data. What is required is
+metrics like median, 75th and 90th percentile that give some idea about the
+distribution of deals. Even just a single metric---the median---would prevent a
+single large deal from skewing the metric. However, the system of record does
+not provide this aggregate as a function out of the box, and the group is now
+resigned to looking at a highly precise metric that paints the wrong picture.
 
 **Example.** An internet user who works in technical support
 [writes][slashdot-support-SLA] that he has a metric of what percentage of
@@ -895,19 +906,111 @@ filter their age by SLA and make a quick calculation. Easy, precise and unfair.
 
 **Avoiding the Pitfall.** When using metrics to measure human performance,
 accuracy, i.e. measuring something that is a fair representation of work or
-results, is important. An approximation that looks "good enough" to decision
-makers may have a devastating impact on those doing the work. If you are going
-to measure humans with metrics, accepting limitations in measurement, when we
-are not accepting limitations of the human, is just unfair. To be sure you are
-being accurate instead of just precise, explain the metric to those who will be
-measured by it in great detail, and get candid feedback from them, before
-implementing the metric.
+results, is very important. An approximation that looks "good enough" to
+decision makers may have a devastating impact on those doing the work. If you
+are going to measure humans with metrics, accepting limitations in measurement,
+when we are not accepting limitations of the human, is just unfair. To be sure
+you are being accurate instead of just precise, explain the metric to those who
+will be measured by it in great detail, and get candid feedback from them,
+before implementing the metric.
 
-### Normal Variance vs Significant Variance
+### Wasting Time Discussing Normal Variance
+
+More reports of metrics helpfully try to contrast the metric against expected
+achievement against target, and some call out variances in the metric over time.
+Metrics are helpfully colored green (on-track or better than target), yellow (at
+risk) and red (off track; needs intervention) on how big the deviation is. Red
+and Yellow colored metrics attrct attention and invite questions and discussion.
+A significant amount of time is consumed this way. Are they bringing attention
+to things deserving the most attention? Is the time for discussion being spent
+on the right metrics?
+
+When it comes to human work with many variables, some variance in metrics is
+inevitable and even expected. Let's call this "normal variance".  Variation
+beyond this boundary might be indicative of a problem, and let's call that
+"significant variance".  When looking at performance, scarce time and attention
+should go to discussing "significant variance".  Hence not all deviations are
+marked "red". There is an element of judgment in deciding the range of deviation
+to classify as at-risk and off-track. Who decides the range? And what should the
+range be decided by?
+
+I can tell you who *does not* decide the range in most organizations: people who
+do the work.
+
+The people who decide these ranges are usually dedicated operations specialists
+who look at historical data, multiple geographies, customer segments, functions
+etc. to come up with an educated (we hope) guess about what deviations should be
+highlighted for discussion. The ranges are usually set to be the same for
+"similar" groups and individuals. This is over-standardization at work.
+
+However, in reality, *most of the time*, standardized deviations are not well
+tailored to any particular group.
+
+**Example.** [The US Air Force found][airforce-cockpit-average] that by
+designing aircraft cockpits according to "average" dimensions of pilots, they
+were causing crashes (highlights mine):
+
+> Back in 1926, when the army was designing its first-ever cockpit, engineers
+> had measured the physical dimensions of hundreds of male pilots (the
+> possibility of female pilots was never a serious consideration), and used this
+> data to **standardize** the dimensions of the cockpit.
+
+> ... Using the size data he had gathered from 4,063 pilots, Daniels calculated
+> the average of the 10 physical dimensions believed to be most relevant for
+> design, including height, chest circumference and sleeve length. These formed
+> the dimensions of the “average pilot,” which Daniels generously defined as
+> someone whose measurements were **within the middle 30 per cent** of the range
+> of values for each dimension. ... Next, Daniels compared each individual
+> pilot, one by one, to the average pilot.
+
+> ... the consensus among his fellow air force researchers was that the vast
+> majority of pilots would be within the average range on most dimensions. After
+> all, these pilots had already been pre-selected because they appeared to be
+> average sized. ... But even Daniels was stunned when he tabulated the actual
+> number.
+
+> **Zero.**
+
+> Out of 4,063 pilots, **not a single airman fit within the average range** on
+> all 10 dimensions.
+
+Now compare this to the less fatal business of deciding how someone or some
+group is performing. Each group will have a set of metrics.  Almost every group
+will have some metric that is flagged for attention due to standardized
+deviation ranges, but that is actually normal for their business. Hence someone
+or the other will want to discuss that metric and spend precious time on it. In
+other words, we will spend a lot of time discussing what is normal variance. It
+gets worse. Let's say some group has explained already that a partiular
+deviation is normal for them last month. In the current month's report, their
+metric is flagged again (due to the standardized deviation ranges) but most
+reports do not carry over the explanation from last month. A new member joins
+the discussion and wants to discuss the metric again...
+
+By the way, almost no report highlights exceptionally good performance versus
+"just" good performance.  They are both colored the same way: green.  There may
+be something to learn from groups who are performing eceptionally well against
+their metrics. But few report (I have yet to see one) call this out. It is up to
+the meeting attendees to notice this and discuss it. A charitable explanation is
+that exceptionally good performance is rare, and the reporting apparatchik may
+not find it a good use of time to work on defining a boundary for it and
+highlighting it. Another explanation is that it has something to do with the
+underlying motivation: keeping the people who do the work under control.
+
+**Avoiding the Pitfall.** If you are setting up a reporting organization, make
+their purpose clear to them and everyone else; and the purpose should be using
+reports to **help the business improve, iteratively, based on feedback**. Don't
+measure their performance by how many reports they have produced. Ensure the
+reporting organization is equally accountable to the people whose performance
+they are measuring and not just senior leaders who are far from the work. Be
+wary of over-standardization. Be especially wary of aggregates or calculations
+that have not been well-documented. If the reporting organization is not taking
+responsibility for explaining their impositions then it is time to explain to
+them where their accountability lies: to improve the business, and not to please
+decision makers.
 
 ## Pitfalls in Interpreting Metrics
 
-### Over-Simplification
+### Over-Simplified Metrics
 
 In a bid to compress information into a simple to understand metric, we
 inadvertently lose a lot of information that is critical to good decision
@@ -953,7 +1056,24 @@ indicator when two conditions are met: (a) the underlying data has a gaussian
 distribution; and (b) the data range is not *clipped* at either end of the
 range. If you are not sure your data follows this distribution, look deeper.
 
-### Knee-jerk Improvement
+### Knee-jerk "Improvement"
+
+In situations where a metric is used across a number of groups or individuals,
+and reviewed across them, there is an implicit performance comparision and hence
+competitive pressure. The pressure leads to the explicit or implicit question:
+"how do we improve this metric?" Even if the decision maker explicitly
+acknowledges that it is not a comparison, the pressure remains simply by the
+juxtaposition being there.
+
+Sometimes, the metric should not be improved. It should be just what it is. Or,
+if should change, but not in comparison to other groups, but on its own.
+However, the pressue to improve the metric leads to groups at best discussing
+the embarrasment of having the lowest value for the metric and concluding they
+should not change anything, and at worst, changing something to the detriment of
+their mission just to avoid the embarrasment.
+
+In his book, *The Delicate Art of Bureaucracy*, Mark Schwartz writes from
+personal experience:
 
 ## Pitfalls of ignoring non-metric anecdotes, anomalies and signals
 
@@ -1259,3 +1379,4 @@ Then (Muller):
 [campbell-law]: https://en.wikipedia.org/wiki/Campbell%27s_law
 [sandbagging-sales]: https://blog.hubspot.com/sales/sandbagging-sales
 [slashdot-support-SLA]: https://slashdot.org/comments.pl?sid=18878152&cid=61376762
+[airforce-cockpit-average]: https://www.thestar.com/news/insight/2016/01/16/when-us-air-force-discovered-the-flaw-of-averages.html
