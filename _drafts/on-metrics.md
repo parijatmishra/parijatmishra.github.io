@@ -53,6 +53,62 @@ etc. I will also use the terms "accuracy" and "precision" distinctly, as
 described [here][accuracy-good] (the [Wikipedia definition][accuracy-wiki] is
 defined in satistics terms and is too technical for my purposes).
 
+
+## Definitions
+
+For clarity, I will be using some terms with the following meanings:
+
+ * **Data** are units of information, often numeric, collected through
+   observation.
+ * A **metric** is a numerical measurement of some data, and for the purposes of
+   this article, data on some aspect of work and performance of people. By
+   itself, it is devoid of a judgment of value. For e.g., let's consider a
+   software development team that is practicing an agile development methodology
+   called Scrum. Scrum teams measure their work in terms of *story points*.
+   During a fixed time-internal, called *sprint*, the team attempts to do as
+   much work as possible without compromising quality. The amount of work done,
+   measured in story points completed per sprint, is called *sprint velocity*.
+   Let's say that a team finds average sprint velocity was 40 story points last
+   month. By itself, this metric is neither good nor bad. It just tells the
+   state of affairs.
+ * A **target** is some value for a metric that is considered desirable. A
+   target turns a metric into a value judgment. Let's say our software
+   development team feels they could do more work. They set themselves a target
+   to raise their sprint velocity from 40 to 45 story points.
+ * A **goal** is a target that has consequences for not meeting it. Let's say
+   that the engineering manager of several application development teams sets
+   each team a goal of achieving a sprint velocity of 45 story points. If a team
+   exceeds this goal, they are rewarded somehow (team dinner, performance bonus,
+   salary increments, etc.).
+ * **High stake** goals vs **low stake** goals: how do individuals perceive the
+   importance of meeting goals versus the underlying non-numeric objective.
+   Let's say the objective of our software development team is to produce high
+   value software, with adequate quality, as fast as possible. Sprint velocity
+   purports to measure the quantity of features delivered, but not quality. If
+   the goal of 45 story points per sprint is perceived to be high stakes, the
+   team may assume that the correct behavior expected from them is to increase
+   the velocity even if quality drops.
+ * Metrics are not reality, but represent an aspect of reality. A metric is more
+   **accurate** than it's value is closer to the truth. A metric is more
+   **precise** than another if it is more exact. Imagine that you want to
+   measure how many hours a day, on average, employees spend at work. You decide
+   that the amount of time spent in office is a good representation of reality.
+   You ask your employees what time they get into office and what time they
+   leave. They give you times precise to the half-hour: "I get in at 8:30AM and
+   leave at 6:00PM", for example.  You do the math and say employees are
+   spending 7h 30mins, on average, at work.  Now your look at the log of the
+   office badge-in/out system, which records timestamps for entries and exits to
+   a minute's precision. You do the math and conclude that employees are
+   spending 7h 45m per day, on average, in office. The second metric is more
+   exact and therefore more precise. However, is this accurate? You now ask
+   every employee how many hours they *actually* spend on work, discounting
+   lunch, coffee breaks and distractions, and get estimates like "between 6-7
+   hours" and "between 8-10 hours". There is a great deal of variation. You
+   conclude that 95% of employees spend between 7 and 10 hours a day on work,
+   with the median being 9 hours. This is much less precise (it's a range) but
+   is likely to be a more accurate representation of reality for the purposes of
+   making decisions.
+
 ## Why Use Metrics?
 
 Metrics (and associated targets or goals) are often created without a discussion
@@ -415,39 +471,6 @@ data:
 > You do need the data, but then you need to check that data with your intuition
 > and your instincts.
 
-## Definitions: Metrics, Targets, Goals
-
-For clarity, I will be using some terms with the following meanings:
-
- * A **metric** is a numerical measurement of some data, and for the purposes of
-   this article, data on some aspect of work and performance of people. By
-   itself, it is devoid of a judgment of value. For e.g., let's consider a
-   software development team that is practicing an agile development methodology
-   called Scrum. Scrum teams measure their work in terms of *story points*.
-   During a fixed time-internal, called *sprint*, the team attempts to do as
-   much work as possible without compromising quality. The amount of work done,
-   measured in story points completed per sprint, is called *sprint velocity*.
-   Let's say that a team finds average sprint velocity was 40 story points last
-   month. By itself, this metric is neither good nor bad. It just tells the
-   state of affairs.
- * A **target** is some value for a metric that is considered good.  Let's say
-   our software development team feels they could do more work. They set
-   themselves a target to raise their sprint velocity from 40 to 45 story
-   points.
- * A **goal** is a target that has consequences for not meeting it. Let's say
-   that the engineering manager of several application development teams sets
-   each team a goal of achieving a sprint velocity of 45 story points. If a team
-   exceeds this goal, they are rewarded somehow (team dinner, performance bonus,
-   salary increments, etc.).
- * **High stake** goals vs **low stake** goals: how do individuals perceive the
-   importance of meeting goals versus the underlying non-numeric objective.
-   Let's say the objective of our software development team is to produce high
-   value software, with adequate quality, as fast as possible. Sprint velocity
-   purports to measure the quantity of features delivered, but not quality. If
-   the goal of 45 story points per sprint is perceived to be high stakes, the
-   team may assume that the correct behavior expected from them is to increase
-   the velocity even if quality drops.
-
 ## Is There A Problem? Yes: Metric *Fixation*.
 
 In 1956, in [an article][ridgway-1] in the journal Administrative Science
@@ -698,15 +721,7 @@ regardless of whether the overall task was fully completed. This engineer was,
 in fact, making effort on making sure his commits were easily comprehensible and
 helping his peers and organization. If we had adopted this metric as an input
 into performance ratings, we would have mis-classified a high-performing
-engineer to be a low performer. In my current organization, a functional group
-is facing a similar situation; not exactly code commits, but a similar recording
-of work is being measured and goaled globally. One manager with a poor
-achievement on the metric spoke to his counterpart in another geography to learn
-how their numbers were much higher and discovered they were simply reporting
-"work" in fine-grained installments and not on completion of the overall
-engagement. This was not malicious: they had always done so as a local best
-practice. The problem was that a global "standard" metric and goal was being
-adopted when different groups had very different interpretations of the metric.
+engineer to be a low performer.
 
 **Example.** My team members get work requests on an ongoing basis,
 unpredictably. The incoming work and associated timelines are dependent on
@@ -727,11 +742,11 @@ the value of very different kinds of work with a "standard" metric.
 
 **Avoiding the Pitfall.** Overly-standard metrics may seem to save time but in
 effect they will waste everyone's time by creating errors in the system that
-will later need to be fixed. The first remedy is that before trusting a metric
-to be standard, we must investigate it thoroughly by checking in with all (or a
-representative sample) of people who actually do the work. The second remedy is
-not introduce a standard at all but continue to deal with complexity as it is
-instead of trying to paper over it. 
+will lead to bad decisions or will need to be fixed later. The first remedy is
+that before trusting a metric to be standard, we must investigate it thoroughly
+by checking in with all (or a representative sample) of people who actually do
+the work. The second remedy is not introduce a standard at all but continue to
+deal with complexity as it is instead of trying to paper over it. 
 
 ## Pitfalls in Data Input
 
@@ -763,6 +778,18 @@ process easier for our customers.  I went through all records tagged with
 about COTS software. The people who had been applying the tags were not very
 technology minded and if a customer said "web app" they interpreted it to be a
 business app. The metric was based on flawed data.
+
+**Example.** In my current organization, a functional group with multiple
+geographically dispersed teams has decided to use a particular record of work
+done as a standard metric across teams, with goals per team. One manager with a
+poor achievement on the metric spoke to his counterpart in another geography to
+learn how their numbers were much higher and discovered they were simply
+recording their work in finer-grained installments than others; each interaction
+was recorded, not just the completion of the overall task. This was not
+malicious: they had always done so as a local best practice. The problem was
+that a global "standard" metric and goal was being adopted when different groups
+had very different interpretations of the metric, making one group look much
+less productive than another completely inadvertently.
 
 **Avoiding the Pitfall.** The first remedy is to define, communicate and get
 feedback about the interpretability of a metric *before* implementing it.
@@ -1059,41 +1086,214 @@ range. If you are not sure your data follows this distribution, look deeper.
 ### Knee-jerk "Improvement"
 
 In situations where a metric is used across a number of groups or individuals,
-and reviewed across them, there is an implicit performance comparision and hence
+and reviewed across them, there is an implicit performance comparison and hence
 competitive pressure. The pressure leads to the explicit or implicit question:
-"how do we improve this metric?" Even if the decision maker explicitly
-acknowledges that it is not a comparison, the pressure remains simply by the
-juxtaposition being there.
+"how do we improve this metric?" Sometimes, the metric should not be improved.
+It should be just what it is. Or, if should change, but not in comparison to
+other groups, but on its own. Even if the decision maker explicitly acknowledges
+that it is not a comparison, the pressure remains simply by the juxtaposition
+being there. Repeated comparison embarrasses groups with low numbers for their
+metric, and forces them into changing something to the detriment of their
+mission just to avoid the embarrassment.
 
-Sometimes, the metric should not be improved. It should be just what it is. Or,
-if should change, but not in comparison to other groups, but on its own.
-However, the pressue to improve the metric leads to groups at best discussing
-the embarrasment of having the lowest value for the metric and concluding they
-should not change anything, and at worst, changing something to the detriment of
-their mission just to avoid the embarrasment.
+**Example.** In his book, *The Delicate Art of Bureaucracy*, Mark Schwartz
+recounts an experience of the pressure to "improve" a metric. Schwartz works in
+a group that publishes articles on an official company blog for senior
+enterprise executives. This blog is one of many, each on different themes
+targeting different audiences. A report on viewership indicated that Schwartz's
+blog was (only) the 18th most viewed blog. Someone asked what the group intended
+to so about it. The assumption was that since there is a metric, it must be
+improved. Schwartz's group, which actually did the work, did not see things that
+way. The audience for their blog was a narrow one. It was justified that there
+would not as many viewers compared to other blogs that catered to a larger
+audience. Trying to make the blog more popular, by writing articles that
+appealed to more people but at the cost of being less appealing to its specific
+audience, the blog would lose its purpose. The metric and comparison created
+pressure to create a false "improvement". 
 
-In his book, *The Delicate Art of Bureaucracy*, Mark Schwartz writes from
-personal experience:
+**Avoiding the Pitfall.** Knee-jerk reactions are a side-effect of
+over-simplification and over-standardization. When using a metric across
+different groups, do not present them in a way that compares the groups, at
+least publicly. It is *extremely* tempting to do so, when the groups seem to be
+similar. If you do compare two groups for performance based on metrics, do the
+comparison privately, and then dive deeper into the circumstances of each group:
+What are they doing? What are they doing differently from the other group? How
+do their circumstances differ?  This is a fair amount of work, and is much
+harder than just telling the groups "this is how you compare to each other.
+Lower performing group: pull up your socks." If you do not do this extra work of
+open-minded investigation, you will create an environment where people will try
+to beat metrics than focusing on doing good work.
 
-## Pitfalls of ignoring non-metric anecdotes, anomalies and signals
+## Pitfalls in Making Decisions
 
-## Pitfalls in Making Metric-based Decisions and Providing Feedback
+Decision-makers, at the end of the day, need to make decisions. Giving groups
+and individuals feedback on performance is a kind of decision (what feedback to
+give). Other decisions are about setting goals, structuring the organization,
+deciding what work should or should not be done. There are numerous exhortations
+for organizations to make data-driven decisions (examples:
+[1][northeastern-dddm], [2][hbs-benefits-dddm]). I am not arguing against using
+data to make better decisions. I am arguing against making decisions based
+purely on *quantitative* metrics.
+
+### Pitfalls of Ignoring Non-Metric Data
+
+There's more to reality than that is captured by metrics.  The [McNamara
+fallacy][mcnamara-fallacy] (also known as the quantitative fallacy), named for
+Robert McNamara, the US Secretary of Defense from 1961 to 1968, involves making
+a decision based solely on quantitative observations (or metrics) and ignoring
+all others. It [proceeds like this][mylogicalfallacy]: Measure whatever can be
+easily measured. Disregard that which cannot be measured easily. Presume that
+which cannot be measured easily is not important. Presume that which cannot be
+measured easily **does not exist**.
+
+**Example.** A publicly listed, well-known company in my corner of the world
+decided to build a new product and run it as a subsidiary. The company chose to
+outsource the development, setup and operations. Following established
+procurement processes, they invited bids from vendors.  They asked the bidding
+vendors to include several data points along with their technical proposals:
+their financial strength, their track record (past projects done of a similar
+nature), and of course, the price. I was not privy to the decision making
+process, but was somewhat surprised when the contract was awarded to a vendor
+with (in my opinion) no past track record and no demonstrable capability in the
+required technologies. Eight months later, the project is in trouble with many
+operational issues. In between, my team and I tried to advise and help the
+vendor in an effort to get them to succeed. We discovered they lacked basic
+knowledge and skills required to implement many aspects of the project. Weren't
+they supposed to have been selected based on, partially, past track record? When
+I quizzed them on their past experience, it appeared that the past projects they
+had referenced had very superficial use of the relevant technologies. My
+conclusion from this is that the bid was awarded on the basis of the
+quantitative metrics: price being the most important one of course, but also the
+*number* of past projects referenced, and ignored the quality of the projects.
+The awarding company effectively ignored the data that could not be quantified,
+and pretended it did not matter or did not exist.
+
+**Avoiding the Pitfall.** Being aware of the pitfall is the first step to a
+remedy. Then ensure that non-metric data is being captured and the people
+providing the data are acknowledged and appreciated. In reviews and
+decision-making meetings, explicitly ask for anecdotes that contradict the story
+the metrics are telling you. Look deeply when anecdotes and metrics disagree:
+you may be missing something that is not measured.
 
 ### Rewarding Luck
 
-Outcomes partially out of control... circumstances... penalties for bad results discouraging ... rewards for things outside control lead to opportunism
+In most human endeavors, there are factors outside our control that have a large
+impact on outcomes. These factors are usually not measured. When one rewards
+people solely on the basis of measured outputs or outcomes, and disregards
+effort, one is essentially rewarding, to some extent luck. When one rewards
+luck, it incentivizes people to improve their luck, by avoiding work with
+uncontrollable factors, even if that work is essential. Put another way, one
+incentivizes *opportunism*, to grasp favorable opportunities. A business can
+lose the best use of talent this way.
 
-### Decisions Based on Partial Information
+**Example.** Sales were particularly good one year in an organization.
+Management expanded the sales team and set aggressive sales targets for the next
+year. An old hand salesperson knew some of his success the previous year was
+attributed to a lot of uncontrollable factors going his way. This salesperson
+was actually really good, and had "cracked" difficult deals in the past. The
+best use of his talent would have been to get him to take on the hardest
+segments of the market. However, the salesperson knew he'd be rewarded only for
+(quantitative) results, not effort or ingenuity, and also that expectations from
+him would be higher due to past results regardless of the external factors.
+Since he knew the market better than the new joiners, he picked the least risky
+customers and prospects for the new year. He convinced management that his picks
+was not unusually favorable to him, partially using his past good performance
+and resulting goodwill, and partially because he knew the market better than
+management who had to believe his explanations for his choices. The new
+salespersons got the harder segments of the market. In the current year, the
+salesperson met his targets almost effortlessly, while the other salespersons
+struggled, and got increasingly demoralized. Ironically, the experienced
+salesperson met the required results in the new year early and easily, got
+bored, and left the company for a more challenging venture---he setup his own
+company---where the risk as well as the reward was higher (essentially the
+opposite circumstances). He told me he found it more fulfilling, as he was now
+judging himself on his own efforts with the quantitative results being
+secondary.
 
-Metrics capture only part of the information... overly relying on metrics and not looking at signals, judgment... counterexample (Amazon advertising) ... example ... Lehman?
+**Avoiding the Pitfall.** To avoid this pitfall, you need to not
+"over-interpret" quantitative results. One way to do this is to look at
+performance against results over a longer term that is less susceptible to
+temporary luck. However, luck can still not be rules out. Hence, judge people's
+performance by understanding their effort and the difficulty of the
+circumstances. This requires "qualitative" reasoning and is both subjective and
+takes greater effort than just looking at metrics. However, this effort is
+essential, if we are to reward people and not luck. There are ways to counter
+subjectivity other than using metrics.
 
 ### Punishing Good Performers for a Few Bad Actors
 
-When metrics are used to assert control....  More metrics on those doing good work... may not be worth it to improve precision or gather additional metrics.... instead, dive into specific areas.
+Organizations often implement new controls and processes in response to a few
+bad actors. Implementing metric-based performance evaluations is a specific way
+of implementing controls and processes. Sometimes, this is justified. In
+government bureaucracies, there is often no accountability on individuals. In
+large organizations, "slackers" can hide in the crowd as long as the overall
+group is performing well. Implementing a metric to measure performance even
+partially is a relatively low cost way of finding out the least performing
+individuals and encouraging them to improve their performance or leave the
+organization. Of course, the metric should not be easily falsifiable. Slackers
+can go to great lengths to avoid work, including putting in more work into
+hiding the fact that they are not doing work.
 
-### Dehumanizing
+However, metrics used this way are useful only to find the outliers. They are
+not effective at distinguishing accurately between "good performers", due to all
+the factors I've mentioned earlier. The trouble is, once an organization starts
+using metrics to judge performance and eliminates a few bad apples, it becomes
+addicted to use them more and more, and gradually replaces other forms of
+judging performance with metrics.
 
-People hate being reduced to a set of numbers.
+I do not have a personal example for this pitfall.
+
+**Avoiding the Pitfall.** In might be unavoidable to institute a few metrics to
+find "slackers". It may actually be necessary to have such data to satisfy
+national laws protecting employees against arbitrary and unfair dismissal.
+However, know that metrics are the beginning of an investigation, not the final
+word. Understand the motivation behind such a metric and keep them lightweight.
+
+### Dehumanizing and Demotivating
+
+This pitfall relates to situations where people are given a numerical score for
+their performance.  People are complex and work they do is multi-dimensional.
+Good performance evaluation and management systems look at multiple dimensions,
+but if they convert the evaluations to a numeric score (a metric), then the
+evaluations become demotivating. Assigning a score to any dimension is
+subjective, to start with. However, some organizations seem to like the illusory
+objectivity of having a numeric quantity and enforce this in their performance
+management systems.
+
+**Example.** In my first job (at a publicly funded research institute), my
+performance was presented as a set of scores between 1 and 5 (fractions
+allowed), and an overall "weighted" score (just a sum really). The immediate
+question I had was why a particular score was 3.5? What could I do to make it
+higher? The answer was that I was doing well given the circumstances and that
+next year I'd have better luck (i.e. things outside my control would allow me to
+score higher). Mark Schwartz describes a similar scoring at his job in the US
+government. Neither of us felt happy at the experience. We'd have been happier
+to have learnt that "you are doing okay, but here are some areas to improve
+upon". The score's sole purpose was to satisfy some bureaucrat that they had a
+good "objective" performance measurement system in place. It's *effect* was to
+create confusion and demotivate people. I'd go further and say that it probably
+dehumanizes managers as well, who are forced to convert imprecise judgments of
+performance ("below expectations", "on track", "above expectations") to a
+number. I've not had to do it so cannot be certain but I think this forces
+managers to spend time agonizing about the number more than giving employees
+qualitative but valuable feedback.
+
+**Avoiding the Pitfall.** Easy: don't create a numeric metric for employee
+performance. Save the time that would have been spent on trying to assign
+numbers to performance and then explaining/defending them, and spend that time
+instead towards honest discussion of what good performance looks like, on why an
+employee is not performing well and what can we do to help, and on how to help
+good employees become great.
+
+
+### Setting Numeric Targets based on Bad Data
+
+One decision that decision makers make is to give employees some goals.
+Metric-fixated decision makers set numeric goals for some metrics. Numeric goals
+are easy to measure against and give clarity to employees on how they are going
+to be judged.
+
+In almost every case, this is counter-productive. 
 
 ## Pitfalls in Changing Work Based on Metric-based Goals
 
@@ -1380,3 +1580,7 @@ Then (Muller):
 [sandbagging-sales]: https://blog.hubspot.com/sales/sandbagging-sales
 [slashdot-support-SLA]: https://slashdot.org/comments.pl?sid=18878152&cid=61376762
 [airforce-cockpit-average]: https://www.thestar.com/news/insight/2016/01/16/when-us-air-force-discovered-the-flaw-of-averages.html
+[mcnamara-fallacy]: https://en.wikipedia.org/wiki/McNamara_fallacy
+[northeastern-dddm]: https://www.northeastern.edu/graduate/blog/data-driven-decision-making/
+[hbs-benefits-dddm]: https://online.hbs.edu/blog/post/data-driven-decision-making
+[mylogicalfallacy]: https://mylogicalfallacy.com/mcnamara-fallacy-summary/
