@@ -301,7 +301,7 @@ result is met or not could be better spent elsewhere.
 
 An alternative view of business is that is is like a biological system, composed
 of complex networks that "constantly reconfigure themselves": i.e., they are
-complex, adaptive systems (CAS) ([Schwarz][schwartz], [*The Art of Business
+complex, adaptive systems (CAS) ([Schwartz][schwartz], [*The Art of Business
 Value*][schwartz-business-value]). Agile and DevOps movements are consistent
 with this view. In this view, instead of hard goals tracked via metrics, the
 organization's various groups still try to achieve the organization's objective,
