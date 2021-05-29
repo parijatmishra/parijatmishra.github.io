@@ -3,12 +3,12 @@ layout: post
 title: Avoiding the Pitfalls of Performance Metrics
 ---
 
-The intended audience for this article is the business or technology leader who
-is considering using quantitative metrics to measure and improve the performance
-of individuals or groups. Quantitative metrics are powerful tools but, when
-applied to human work, can easily cause lasting and deep damage. This article's
-purpose is to help the reader use metrics usefully, and be able to identify and
-avoid their pitfalls.
+The intended audience for this article is a leader who wants to measure and
+improve the performance of people, and is considering quantitative metrics,
+targets and goals to do so. Quantitative metrics are powerful tools. But when
+applied to human work, they can easily cause lasting and deep damage. This
+article's purpose is to help the reader be able to identify and avoid their
+pitfalls, and deploy them usefully.
 
 I was inspired to write this article after reading the books [*The Delicate Art
 of Bureaucracy*][schwartz-bureaucracy] by [Mark Schwartz][schwartz] and [*The
@@ -16,21 +16,10 @@ Tyranny of Metrics*][tyranny-metrics] by [Jerry Muller][muller-1]. While I draw
 from these and many other sources, I do think I have a novel mental model for
 thinking about the pitfalls of metrics and avoiding them.
 
-## An Apology
-
 In a [previous blog article], I wrote how great CTOs use metrics judiciously to
-measure the health of a technology function and to drive change. I believe I did
-not say anything incorrect *per se*, but I grossly understated the potential
-problems with using metrics. I implied it is easy to get them right. They are
-not. An analogy for what I wrote would be "If you enter this forest, you **might
-be** bitten by a **mosquito**". I should have written something more along the
-lines of "If you enter this forest, you **will be** attacked by **several deadly
-animals**." See the difference?
-
-As I researched, wrote, and reflected on this article, I became increasingly
-alarmed at how easily using metrics to judge human performance leads to negative
-effects. I therefore apologize for creating the impression that it was easy to
-get metrics right. With that out of the way, let's dive in.
+measure the health of a technology function and to drive change. I grossly
+understated the potential problems with using metrics. I implied it is easy to
+get them right. They are not. Hence this article amplifies on the topic.
 
 ## Definitions
 
@@ -38,40 +27,42 @@ get metrics right. With that out of the way, let's dive in.
 
 For clarity, I will be using some terms with the following meanings:
 
- * **Data** are units of information, often but not always numeric, collected
-   through observation. Non-numeric employee sentiment ("I feel dissatisfied")
-   and numeric quantity of work estimate ("tickets closed last week") are both
-   data.
- * A **metric** is a numerical measurement of some data. Converting employee
-   sentiment to a score between 1 and 5 would turn non-numeric data into a
-   metric. Some data is already a metric. Metrics are void of judgment, by
-   themselves. Let's say that an agile software development team practicing
-   Scrum finds its [*sprint velocity*][sprint-velocity] to be 40\. By itself,
-   this metric is neither good nor bad.
- * A **target** is some value for a metric that is considered desirable and
-   implies judgment. Let's say the manager of the agile team decides that the
-   sprint velocity should be higher and therefore sets a target of 45. Now the
-   value of 40 is judged, as not as good as 45.
- * A **goal** is a target with some consequences. Let's say that the engineering
-   manager of several application development teams sets each team a goal of
-   achieving a sprint velocity of 45. He says that a team that exceeds this goal
-   will be rewarded (team dinner, performance bonus, salary increments, etc) and
-   a team doesn't meet the goal will have penalties (more scrutiny, lower
-   bonuses, etc.).
- * An **objective**, as opposed to a goal, is a qualitative expression of
-   desired outcomes or state. For e.g., the objective for a software development
-   team could be "in 2021, deliver these features ...., while maintaining
-   software reliability, security, and performance". Goals are not objectives
-   themselves but serve objectives.
+ * **Data** are units of information collected through observation. They are
+   both numeric and non-numeric. E.g.: employee sentiment ("I feel
+   dissatisfied") is a non-numeric datum; an estimate of the quantity of work
+   done ("tickets closed last week") is a numeric datum.
+ * A **metric** is numerical data intended to *measure* something. Some data is
+   already numeric and therefore a metric. Converting employee sentiment to a
+   score between 1 and 5 would turn non-numeric data into a metric. On their
+   own, metrics are devoid of judgment. E.g.: an agile software development team
+   practicing Scrum finds its [*sprint velocity*][sprint-velocity] to be 40\. By
+   itself, this metric is neither good nor bad.
+ * A **target** is some value for a metric that is considered desirable. Desire
+   creates judgment. E.g.: the manager of the agile team decides that the sprint
+   velocity should be higher and sets a target of 45. Now, values below 45 are
+   bad, and above 45 are good.
+ * A **goal** is a target with consequences. E.g.: the engineering manager of
+   several teams sets a goal of achieving a sprint velocity of 45. He/she says
+   that a team that exceeds this goal will be rewarded and a team that doesn't
+   meet the goal will have penalties imposed on them. Now the target is a goal.
+   Target and goal are often used interchangeably but I use the term goal to
+   emphasize the presence of consequences.
+ * An **outcome** is a qualitative expression of desired state. E.g.: the
+   outcome for a software development team could be "in 2021, deliver these
+   features ...., while maintaining software quality, i.e., reliability,
+   security, and performance". Goals (should) serve outcomes.
  * How do individuals perceive the relative importance of meeting goals versus
-   meeting the underlying objective? I will define a goal as **high-stakes** if
-   meeting the goal is perceived to be more important than the objective. E.g.,
+   meeting the underlying outcomes? I will define a goal as **high-stakes** if
+   meeting the goal is perceived to be more important than the outcomes. E.g.:
    our agile team decides to increase their sprint velocity but compromises on
-   reliability and security. I will define a goal as **low-stakes** if the
-   reverse is true. E.g., the team is willing, to lower sprint velocity, if
-   necessary, to shore up reliability and security, and won't be penalized by
-   management for doing so.
- * A metric is more **accurate** than another if it's value is a better
+   reliability and security. They've met the goal but not the outcome. I will
+   define a goal as **low-stakes** if meeting it is perceived to less important
+   than delivering the outcome. E.g.: the team perceives that quality is
+   dropping; they negotiate the outcome with management and lower sprint
+   velocity to increase quality; they are not penalized by management. Here, the
+   team focused on the total outcome (features plus quality) instead of a goal
+   that was supposed to serve it but did not.
+ * A metric is more **accurate** than another if its value is a better
    representation of the reality that a metric is supposed to represent. A
    metric is more **precise** than another if it is more exact, or, would
    evaluate to the same value consistently when measured multiple times. A
@@ -82,10 +73,10 @@ For clarity, I will be using some terms with the following meanings:
 {% include figure.html url='https://upload.wikimedia.org/wikipedia/commons/4/41/BirdMorphometrics_%28beak_measurement%29.jpg' description='Standard measurements of birds, Anton Reichenow, Public domain, via Wikimedia Commons' %}
 
 Metrics, targets and goals are often created without a discussion of why they
-are needed. It is incorrect to assume they will always result in good outcomes.
-Metrics et al are in fact created for different reasons and some reasons are not
-productive. If you know the likely motive, you will be better positioned to ask
-if the metric will serve you well.
+are needed. The same metric may be created because of different motivations
+which impact how they are perceived and used. It is incorrect to assume they
+will always result in good outcomes. If you know the likely motive for a metric,
+you will be better positioned to ask if it will serve you well.
 
 Destructive Motives          | Productive Motives
 -------------------          | ------------------
@@ -123,11 +114,11 @@ reliably, it seems what Lord Kelvin *actually* wrote was:
 > Measurement"][kelvin-right]
 
 First, Kelvin was writing about electrical phenomena. Electrons don't change
-their behavior if we quantify it with numbers. People do (as I will show below).
-Second, Kelvin did not say there is *no* knowledge without numbers, but that
-numerical measurement brings *more* knowledge. Of course, the measurement has a
-cost, and the assumption is that the extra knowledge is always more valuable
-than the cost. In human systems, this may not be true.
+their behavior if we quantify it with numbers. People do. When deploying a
+metric, have we accounted for how it will change behavior? Second, Kelvin did
+not say there is *no* knowledge without numbers, but that numerical measurement
+brings *more* knowledge. Measurement has a cost. Is the extra knowledge always
+more valuable than the cost? In human systems, this may not be true.
 
 **"What gets measured, gets managed."**
 
@@ -154,11 +145,13 @@ from 1986. The source of this seems reliable, coming as it does from the
 author's own website. First, if true, is this actually beneficial? Consider my
 expansion: "*only* what gets measured gets done, and therefore things that are
 not measured, even if they are important, tend not to get done." Second, is this
-true? Maybe. It could be a [self-fulfilling prophecy]: an organization could
-start out with people doing all kinds of important work, measured or not, and a
-set of leaders could start measuring somethings and rewarding people for
-improvements on those things. Then employees decide that un-measured work is not
-worth doing and stop it. Prophecy fulfilled.
+true? Maybe. It could be a [self-fulfilling prophecy]. Consider an organization
+where people are doing many kinds of important work, measured or not. The saying
+does not apply today. A set of leaders start measuring some kinds of work, and
+rewarding people for improvements on only those kinds of work. Soon, employees
+decide that un-measured work is not worth doing and stop doing it. The saying
+applies now. Prophecy fulfilled. This situation can happen because people change
+their behavior when said behavior is measured.
 
 **Takeaway.** Don't try to appear smart by copying. Don't use metrics just
 because someone supposedly said so. Understand where they come from.
@@ -186,18 +179,21 @@ the value they bring deeply, and follow their work in their context. This
 requires time and effort. The complexity seems overwhelming and progress seems
 frustratingly slow.
 
-It seems easier to (a) create standard metrics that measure each group in the
-same or similar way, (b) impose them across groups, (c) use them to measure
-performance, then (d) to set goals for these metrics to improve performance.
+It seems easier to (a) create standard metrics that measure something that is
+common across groups, (b) impose them across the groups, (c) use them to measure
+and compare the performance of groups, and then (d) set goals for these metrics
+to improve performance.
+
+However, as I will show below, standardized metrics lose a lot of context. They
+will not reduce complexity of circumstances.  Therefore they are frequently a
+bad fit for some groups. In fact, they may be a bad fit for all groups. How bad?
+I will explore this later.
 
 **Takeaway.** Check if the motivation behind implementing metrics is to wish
-complexity away. As I will show below, standardized metrics lose a lot of
-context and are frequently ill-suited to some or all group's work. *Imposed
-metrics* will not reduce complexity of behavior, appearances to the contrary. If
-you want to standardize, then do it the way [GM's NUMMI plant did] (as described
-by Paul Adler, Prof. of Management and Organization, University of Southern
-California). This is significantly more work than *imposing* metrics and goals,
-but the results can be stellar.
+complexity away, and resist standardization if this is true. If you really want
+to standardize, then do it the way [GM's NUMMI plant did] by adopting Toyota's
+Lean Manufacturing principles. This is significantly more work than *imposing*
+standard metrics and goals, but the results can be stellar.
 
 ### 3. Destructive Motive: To Replace Human Judgment
 
@@ -234,48 +230,55 @@ than implementing metrics but will improve the organization in a lasting way.
 
 Sometimes, stakeholders believe they are not getting their investment's worth
 from a particular function. If the function is of a specialist nature, working
-by its own riles, stakeholders are unable to influence it's inner workings
-significantly. Stakeholders then feel the need to find a way to assert control.
-Lacking the leverage or expertise to change what is done and how, they use
-metrics and targets for outcomes to assert control.
+by its own rules, stakeholders are unable to influence its inner workings
+significantly. This frustrates them. They then use metrics and targets to assert
+control, manifested via rewards and punishments tied to metrics.
 
-We can see this in the increasing legislation and regulation in the fields of
-education and healthcare in US in the last several decades, which attempts to
-tie practitioners' pay to performance, where performance is measured by
-quantitative metrics. These measures have been controversial, not the least
-because metric-based performance evaluation and corresponding funding / pay has
-not had a clear positive impact on outcomes, and there have been unintended side
-effects (such as greatly increased administrative burden and cost, gaming of
-metrics and demoralization). For more details and references, see [*The Tyranny
-of Metrics*][tyranny-metrics] by Jerry Muller.
+We can see this in the increasing legislation and regulation attempting to tie
+practitioners' pay to performance in the fields of healthcare and education in
+the US. In the past, performance was judged qualitatively, but the new
+legislation mandates that performance be measured quantitatively. These measures
+have been controversial because metric-based performance evaluation and
+corresponding funding/pay has not had a clear positive impact on outcomes, and
+there have been unintended side effects (such as greatly increased
+administrative burden and cost, gaming of metrics and demoralization). For more
+details and references, see [*The Tyranny of Metrics*][tyranny-metrics] by Jerry
+Muller.
 
-The logic behind pay-for-performance (where performance is largely or wholly
-evaluated by metrics, of course) is compelling. Why has it not worked as well as
-hoped? Taking a step back, both education and healthcare are only a part of a
-complex web of socio-economic phenomena. They do not have complete control of
-the outcomes. Measuring outcomes solely as the yardstick of their performance is
-problematic because there are other factors at play.
+The logic behind pay-for-performance, where performance is largely or wholly
+evaluated by metrics, is compelling. Why has it not worked as well as hoped?
+Taking a step back, both education and healthcare are only a part of a complex
+web of socio-economic phenomena. They do not have complete control of the
+outcomes. Using quantitative measures of outcomes as the sole yardstick of
+people's performance is problematic because there are many other factors at
+play.
 
 **Takeaway.** Outcome based metrics and targets on a function cannot improve
 outcomes greatly when the functions are only in partial control of the outcomes.
 Additionally, stricter controls incentivize the function's best performers to
 leave, and the rest to try and game the metrics, dropping the impact on real
-outcomes even further. Using metrics to impose control is a poor strategy.
+outcomes even further.
 
-### 5. Destructive Motive: To Systematize
+### 5. Destructive Motive: To Systematize (Everything)
 
 As organizations become larger, decision makers get further away from the
-action. Additionally, the members of the organization do work of greater
-diversity in pursuit of an increasing variety of objectives. Decision makers
-find it harder to drive the organization in the direction they want. Complexity
-strikes, again. How does one improve performance, then?
+action, and members of the organization do work of greater diversity. Decision
+makers find it harder to drive the organization in the direction they want.
+Complexity strikes, again. How does one improve performance, then? The approach
+taken by the decision makers depends on their mental model of an organization.
 
-One view of organizations is that they are *systematized*, and metrics are a
-good way of setting directions and imposing control. A variant of this
-philosophy is described in the book [*Measure What Matters*][measure-book] by
-investor John Doerr. He writes how he described his "proven approach to
-operating excellence: Objectives and Key Results" to the founders of Google
-(highlights mine):
+All models are, to an extent, wrong, but some are useful. Models are wrong to
+the extent that they are a simplification and leave some details out in favor of
+keeping other details in. Hopefully, the details left out are irrelevant for the
+purposes the model was intended for.
+
+One model of organizations is that they are are a hierarchy of systems and
+sub-systems. Such a hierarchy can be *systematized*. Top-level outcomes can be
+set and a cascading hierarchy of goals and sub-goals can be used to drive a
+large organization towards delivering those outcomes. This philosophy is
+described in the book [*Measure What Matters*][measure-book] by investor John
+Doerr. He writes how he described his "proven approach to operating excellence:
+Objectives and Key Results" to the founders of Google (highlights mine):
 
 > In this goal-setting system, objectives define what we seek to achieve; key
 > results are how those top-priority goals will be attained with specific,
@@ -286,28 +289,27 @@ operating excellence: Objectives and Key Results" to the founders of Google
 > a number**.") You either meet a key result's requirements or you don't; there is
 > no gray area, no room for doubt.
 
-This view is certainly attractive. The whole organization works towards
-achieving a few, well-defined objectives. Key results define milestone against
+This model is attractive. The whole organization works towards achieving a few,
+well-defined objectives (or outcomes). Key results define milestone against
 those objectives. Metrics tell us whether we have achieved a key result, or not,
-with perfect clarity. However, does systematization reek a bit of Soviet-era
-centralized planning? What were its consequences? In reality, an organization
-will have a large number of objectives; if management lists only a few
-objectives, there would be a lot more that are not explicitly mentioned but
-still are important. Key results may not be obvious and may need experimentation
-and research. There may be alternative key results that could lead to the same
-objective. Achievement against some results may not be a binary yes/no, but on a
-continuum. The effort in trying to define metrics that truly capture whether a
-result is met or not could be better spent elsewhere.
+with perfect clarity. What details has the model left out? Some are: (a)
+sub-systems interact with each other across boundaries, creating feedback loops
+leading to surprising effects; (b) some outcomes are important but not captured
+at the top-level, and it is assumed they will be met regardless (e.g., complying
+with the law while trying to meet goals); (c) that the objectives are complete
+and account for the novel (e.g., somehow innovation will occur within the
+framework of goals). How important are these details?
 
-An alternative view of business is that is is like a biological system, composed
-of complex networks that "constantly reconfigure themselves": i.e., they are
-complex, adaptive systems (CAS) ([Schwartz][schwartz], [*The Art of Business
-Value*][schwartz-business-value]). Agile and DevOps movements are consistent
-with this view. In this view, instead of hard goals tracked via metrics, the
-organization's various groups still try to achieve the organization's objective,
-but they (or their managers) define "fitness" parameters and then evolve their
-processes to improve their fitness. Here, metrics may be used by the groups
-themselves to determine how fit they are and in which direction to exert effort.
+An alternative model of organizations is that they are like a biological system,
+composed of complex networks that "constantly reconfigure themselves": i.e.,
+they are complex, adaptive systems (CAS) ([Schwartz][schwartz], [*The Art of
+Business Value*][schwartz-business-value]). Agile and DevOps movements are
+consistent with this model: instead of hard goals tracked via metrics, the
+organization's various groups still try to achieve the organization's
+objectives, but they (or their managers) define "fitness" parameters and then
+evolve their processes to improve their fitness. Here, metrics may be used by
+the groups themselves to determine how fit they are and in which direction to
+exert effort.
 
 If management persists with the idea that systematization is the only good way
 to run an organization, they will expand the scope of systematization to cover
@@ -322,30 +324,32 @@ Bureaucracy*, Mark Schwartz writes (paraphrasing another author):
 Does this version of "20% time" feel like time that is meant for people to feel
 free and be creative?
 
-Before you go down the path of attempting to make every part of the organization
-systematic with a top-down approach, using metrics to measure performance,
-consider whether this approach will lead to systemic problems (pun intended).
+**Takeaway.** Before you go down the path of attempting to make *every* aspect
+of an organization systematized, consider whether this approach will lead to the
+destruction of the ability of the organization to adapt to changing business
+circumstances in order to deliver objectives.
 
 ### 6. Productive Motive: To Inform and Motivate
 
 Organizations undertake changes to improve some outcome. People resist change.
 One common objection is that the change won't improve the outcome significantly
 or at all. By implementing metrics to measure the outcome, getting some
-progressive groups to implement change, and then widely sharing the effects on
-outcomes (assuming they were positive), leaders can convince conservative groups
-that the effect on outcomes is real and significant and convince them to adopt
-the changes. If the impact on outcomes is not positive, management has avoided a
-mistake and perhaps learnt something along the way. The value of metrics is to
-present information clearly.
+progressive groups to implement change, leaders can determine if their
+hypothesis is true. If the impact on outcomes is positive, then by widely
+sharing the results, leaders can convince conservative groups to adopt the
+changes. If the impact on outcomes is not positive, leaders can cut their losses
+and limit the cost of change. The value of metrics is to present information
+clearly.
 
 For example, [Peter Pronovost][pronovost], a previous intensive care specialist
 physician and professor, concluded that a simple 5 item check-list protocol
 would reduce infections in a particular, common, medical procedure. Surgeons are
 not fans of checklists. Pronovost managed to convince a large group of hospitals
-to participate in 2003 ("Keystone Initiative"), and in 2006 reported that they
-were able to reduce infections up to 66%, and save an estimated 1500 lives and
-$100 million over 18 months. In 2008 [Time named Pronovost][pronovost-time] one
-of the 100 most influential people in the world.
+to participate in 2003 to participate in what later came to be called the
+"Keystone Initiative", and in 2006 reported that they were able to reduce
+infections up to 66%, and save an estimated 1500 lives and $100 million over 18
+months. In 2008 [Time named Pronovost][pronovost-time] one of the 100 most
+influential people in the world.
 
 An important aspect of the initiative was that the participants did not just
 implement the new protocol, but used metrics. In the original [2006
@@ -360,9 +364,8 @@ analysis][keystone2], Pronovost wrote (highlights mine):
 > **ongoing monitoring and feedback of performance** were important in sustaining
 > results.
 
-Daily goals sheets, ongoing monitoring and performance feedback sound like many
-organizational metric and target driven performance management practices.
-However, Pronovost also wrote (highlights mine):
+Daily goals sheets, ongoing monitoring, performance feedback... This sounds
+fairly regimental. However, Pronovost also wrote (highlights mine):
 
 > The Keystone ICU project demonstrated the potential of **voluntary efforts**
 > that rely on **intrinsic motivation** through peer norms and professionalism.
@@ -430,40 +433,18 @@ data:
 
 {% include figure.html url='https://upload.wikimedia.org/wikipedia/commons/e/e4/EyeFixationsReading.gif' description='Hans-Werner34 at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons' %}
 
-I wrote earlier that metrics themselves are devoid of judgment. Targets or goals
-imbue metrics with judgment. A little bit of judgment and the consequent
-feedback can't be that bad, can it?
-
-In 1956, in an article in the journal Administrative Science Quarterly, the
-author, V.F. Ridgway wrote:
-
-> Quantitative measures of performance are tools,... Judicious use of a tool
-> requires awareness of possible side effects and reactions.  Otherwise,
-> indiscriminate use may result in side effects and reactions outweighing the
-> benefits...The cure is sometimes worse than the disease.
-
-As you can see, the author was not positive about quantitative measurements.  In
-fact, the title of the article was [*Dysfunctional Consequences of Performance
-Measurements*][ridgway-1].
-
-At this point, we should be skeptical. As Lord Kelvin said, being able to
-express some quantity numerically adds to our knowledge. Further, how can
-metrics have "side effects and reactions"?
-
 At a high-level, problems occur when people think the *only* way to run an
 organization well is to use *only* metrics to measure performance, and to set
 *goals* against metrics to improve performance. I will call this phenomena
 **metric fixation**, borrowing from Jerry Muller's book, [*The Tyranny of
 Metrics*][tyranny-metrics].
 
-So the solution would be to promise ourselves that we will not overuse or misuse
-metrics. Problem solved? Not so easy. There are many traps to avoid when using
-metrics.
-
 There are scholarly papers, books, and articles on the internet that talk about
 either a specific failure mode of metrics, or a unstructured laundry list of
-things that can go wrong. To think about problems with metrics in a structured
-way, here is a mental model:
+things that can go wrong. If getting metrics right is important, we should also
+have some confidence that we are not missing something. In other words, a
+structured and comprehensive approach. To think about problems with metrics in
+a structured way, here is a mental model:
 
 {% include figure.html url='/assets/img/Metrics-Model.png'
 description='Metrics Lifecycle' %}
@@ -734,7 +715,7 @@ now referred to as [Campbell's Law][campbell-law]:
 
 When a metric-based goal is imposed on a group or individual to assert control
 over their work, people are tempted to "game" the metrics. The higher-stakes the
-goal, the greater the temptation. Due to this, the metric fails to achieve it's
+goal, the greater the temptation. Due to this, the metric fails to achieve its
 objective of improving performance, diverts resources away from real work to
 meeting the goal by manipulating data, and then incurs significant additional
 costs in bureaucratic attempts to thwart the gaming.
@@ -1166,7 +1147,7 @@ answer was that I was doing well given the circumstances and that next year I
 might do better (i.e. things outside my control would allow me to score higher).
 I'd have been happier to have learnt that "you are doing okay, but here are some
 areas to improve upon". The score's sole purpose was to satisfy some bureaucrat
-that they had a good "objective" performance measurement system in place. It's
+that they had a good "objective" performance measurement system in place. Its
 *effect* was to create confusion and demotivate people. I'd go further and say
 that it probably dehumanizes managers as well, who are forced to convert
 imprecise judgments of performance ("below expectations", "on track", "above
