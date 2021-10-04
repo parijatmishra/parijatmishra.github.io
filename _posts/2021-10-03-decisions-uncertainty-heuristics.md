@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Managing Uncertainty in Technology Decisions
+title: Reducing Uncertainty in Technology Decisions
 ---
 
 If you are a technology leader, you know you make decisions, big or small, all the time. You also know that each decision carries some risk. Risks arise from several sources. We know how to mitigate many of the sources, but one of them is insidious: **uncertainty due to lack of information**. Behavioral phychologists and economists have spent decades researching how humans make decisions under uncertainty, and have found that a very wide variety of errors in decisions arise due to a few---just three, in fact---mental shortcuts humans use on a daily basis. We are largely unaware we are using them. These shortcuts, while useful in most circumstances, create systematic and predictable errors. In this article I will discuss how uncertainty creates risks, how we deal with uncertainty intuitively, and how to identify and stop the mental shortcuts that can lead us to make errors. I hope this will help you increase the quality of your decisions and reduce risk, with only a little effort.
