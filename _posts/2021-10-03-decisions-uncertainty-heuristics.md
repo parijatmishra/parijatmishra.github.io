@@ -92,7 +92,9 @@ This is a fundamental concept in probability theory---conditional probability. H
 
 ### Experimental Evidence
 
-An experiment was conducted where subjects had to estimate the probability that an individual (*a*), picked from a population of engineers (*A*) and lawyers (*not A*), was actually an engineer (likelihood that *a* is an instance of *A*). The subjects were divided into several groups and given different information.
+An experiment was conducted where subjects had to estimate the probability that an individual, picked from a population of engineers and lawyers, was actually an engineer. The subjects were divided into several groups and given different information.
+
+Here, the instance is *a*, and the classes of interest are engineers (*A*) and lawyers (*not A*).
 
 #### Predictions when information about *a* was not present
 
