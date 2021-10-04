@@ -3,7 +3,9 @@ layout: post
 title: Uncertainty, Mental Shortcuts, and Errors in Technology Decisions
 ---
 
-If you are a technology leader, you know you make decisions, big or small, all the time. You also know that each decision carries some risk. Risks arise from several sources. We know how to mitigate many of the sources, but one of them is insidious: **uncertainty due to lack of information**. Behavioral phychologists and economists have spent decades researching how humans make decisions under uncertainty, and have found that a very wide variety of errors in decisions arise due to a few---just three, in fact---mental shortcuts humans use on a daily basis. We are largely unaware we are using them. These shortcuts, while useful in most circumstances, create systematic and predictable errors. In this article I will discuss how uncertainty creates risks, how we deal with uncertainty intuitively, and how to identify and stop the mental shortcuts that can lead us to make errors. I hope this will help you increase the quality of your decisions and reduce risk, with only a little effort.
+If you are a technology leader, you know you make decisions, big or small, all the time. You also know that each decision carries some risk. Risks arise from several sources. We know how to mitigate many of the sources, but one of them is insidious: **uncertainty due to lack of information**. Behavioral phychologists and economists have spent decades researching how humans make decisions under uncertainty, and have found that a very wide variety of errors in decisions arise due to a few---just three, in fact---mental shortcuts humans use on a daily basis. These shortcuts, while useful in some circumstances, create systematic and even predictable errors. Sadly, we are largely unaware we are using them. In this article I will discuss what we know about how humans deal with uncertainty intuitively, the kinds of errors this can create, and how to identify and stop the mental shortcuts that can lead us to make errors. I hope this will help you increase the quality of your decisions and reduce risk, with only a little effort.
+
+If you have seen instances where any of these shortcuts were being used, I would love to hear from you. I will update this article with your anecdotes if I find your stories clear and illustrative. Please do not share anything confidential, but do provide sufficient detail that a reader of this blog unfamiliar with your situation can understand the core idea.
 
 ## Risks and Uncertainty
 
@@ -104,9 +106,11 @@ Groups A1 and A2 used the prior probabilities correctly, as no other information
 
 * Group B1: subjects were given the same population numbers as group A1 (70 engineers and 30 lawyers) and additionally were given a brief fictitious "personality description" of the individual. The description had very little information but would match the stereotype of an engineer or lawyer. For exampke, one description was "an introverted, analytical man". This group on average estimated the likelihood of the individual being an engineer or lawyer to be almost 100%, depending on what stereotype they were presented.
 
-* Group B2: subjects were given the same population statistics as group A2 (30 engineers and 70 lawyers) and additionally were given a brief fictitious "personality description" of the individual, like group B1. They too ignored the population statistic and made predictions just like group B1, based entirely by the stereotype.
+* Group B2: subjects were given the same population statistics as group A2 (30 engineers and 70 lawyers) and additionally were given a brief fictitious "personality description" of the individual, like group B1. They too ignored the population statistic and made predictions just like group B1, depending on what stereotype they were presented.
 
-Groups B1 and B2 should have taken the description into account but also the prior probabilities. Consider that "an introverted, analytical man" does match the stereotype of an engineer but is not 100% predictive. Some engineers are not introverted and others are intuitive and not analytical. Some lawyers are introverted and/or analytical as well. The description could have tweaked the prior probabilities, but not by a lot. Yet, given just a both groups B1 and B2 ignored the prior probabilities entirely, and gave a lot of weight to very meager information.
+Arguably, "an introverted, analytical man" does match the stereotype of an engineer. That is to say, the instance *resembles* the class. But how much information does this description contain? Consider: are you sure *all* engineers are introverted and analytical? If not, there is a percentage of engineers who do not match the description. Consider: can lawyers be introverted and analytical? If so, the description could match a portion of lawyers. Consider: will all introverted and analytical people seek engineering as an occupation? There are other factors involved: is there a good and afforable engineering school they have access to? Were any of their parents or influential parental figures lawyers? If they were analytical, were they better in the school debate team or physics club? Did their school have luminary alumnis who were engineers or lawyers? What about other unknown personality characteristics? Thinking of these factors, would you say the conclusion that the description predicts an engineer is a slam-dunk?
+
+The description could have tweaked the prior probabilities, but not by a lot. Yet, given just a smidgen of information of dubious value, both groups B1 and B2 ignored the prior probabilities entirely.
 
 #### Predictions when information about *a* was present and inconclusive
 
@@ -118,7 +122,7 @@ In this case, the groups got inconclusive information. The information by itself
 
 #### Experimental Evidence: Summmary
 
-The experiment has been replicated in many different ways. It is well established that humans tend to think that "sameness"---no matter how tenuous---is a strong predictor of "likely" and do not consider prior probabilities. Even useless information, where "sameness" does not dominate one way or other, is enough to erase the consideration of prior probabilities. As we saw above, it leads to absurd predictions.
+The experiment has been replicated in many different ways. It is well established that humans tend to think that "sameness"---no matter how tenuous---is a strong predictor of "likely" and do not consider prior probabilities. Somewhat alarmingly, even useless information, where "sameness" does not dominate one way or other, is enough to erase the consideration of prior probabilities. As we saw above, it leads to absurd predictions.
 
 ### Countering the Heuristic
 
