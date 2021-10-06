@@ -24,7 +24,7 @@ There are two ways to reduce risk:
 1. Reduce the *cost* of making the wrong decision.
 2. Reduce the *probability* of making the wrong decision.
 
-There are several techniques for reducing the cost of making a mistake, such as building low-cost minimum viable products to get early feedback and using software abstraction layers to make it easy to swap products. Let us assume our hypothetical startup has used such techniques to reduce the cost of making a mistake. What remains? Gaps in available information.
+There are several techniques for reducing the cost of making a mistake, such as building low-cost minimum viable products to get early feedback and using software abstraction layers to make it easy to swap products. Let us assume our hypothetical startup has used such techniques to reduce the cost of making a mistake. What remains? The probability of choosing a non-optimal option, which is determined by the gaps in available information.
 
 Sometimes, we simply can't get more information. For example, in the case of the queuing system, while we've reduced the cost of error, the only way we can reduce the *probability* of error is to know what our future needs are. This may simply not be possible.
 
