@@ -198,7 +198,7 @@ It is a common experience that subjective probability estimates of traffic accid
 
 ### Countering the Heuristic
 
-Lifelong experience has taught us that, in general, instances of large classes are recalled better and faster than instances of less frequent classes. So this heuristic serves a useful purpose. However, in technology, we often encounter situations that are novel to us or where we simply have not been exposed to the various classes equally. To make objectively good decisions, we need to suspend this heuristic.
+Lifelong experience has taught us that, in general, instances of large classes are recalled better and faster than instances of less frequent classes. So this heuristic serves a useful purpose. However, in technology, we often encounter situations that are novel to us or where we simply have not been exposed to the various classes equally. To make objectively good decisions, we need to suspend this heuristic and look harder for objective data.
 
 When making technology decisions of the form:
 * What is the probability of outcome *A* happening (or not happening)?
