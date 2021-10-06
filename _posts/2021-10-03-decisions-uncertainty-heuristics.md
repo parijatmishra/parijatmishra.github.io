@@ -244,7 +244,7 @@ Two groups of high school students were asked to estimate, within 5 seconds, the
 
 ### Countering the Heuristic
 
-If at all possible, don't do "quick estimates" for anything of consequence. Still, there are sitations where you simply don't have time to do a more thorough estimate. In such cases, just know that the estimate is quite likely to be *very* wrong and be humble and prepared to change your mind when someone presents a more thought through estimate.
+If at all possible, don't do "quick estimates" for anything of consequence. Still, there are situations where you simply don't have time to do a more thorough estimate. In such cases, just know that your quick estimate is quite likely to be *very* wrong. Be humble and prepared to change your mind when someone presents a more thought through estimate.
 
 Anytime you are going to estimate a numerical value, stop and ask yourself: what is the last number you saw or heard. It is almost certainly behaving as your anchor. You can't get rid of the anchor. If you've made an estimate already, starting again with a different anchor won't help---you will feel psychological pressure to defend your first estimate, especially if the new estimate is significantly different from your original one. The only way to get an independent assessment is to ask someone else who has not been exposed to your anchor.
 
