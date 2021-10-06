@@ -254,8 +254,6 @@ Anytime you are adjusting quantities upwards or downwards to get a subjective fe
 
 Be wary when negotiating prices with vendors. Always do your own estimation first (you don't have to disclose it). Otherwise, the vendor's initial number will become your anchor over which you will haggle (downwards of course) and will adjust insufficiently.
 
-In general, the only was to counter this heuristic is to not make intuitive estimates but use mechanical and scientifically sound procedures. If you don't have the time for that, know that your estimate is highly likely to be off the mark and don't be too proud to look for better numbers when you do have time.
-
 # Closing remarks
 
 There is much literature on the topic of [cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases) and exhortations on avoiding them. There are a great many biases. It seems none of our mental faculties are free from problematic errors. While it is important to know about cognitive biases in general, and specific one in particular, to hopefully avoid and make better judgments, can anyone really remembers all of them and spot them when they are happening? There are just too many. Is there a more tractable way of improving decision making than carry a thick tome listing all our biases and neurotically thumbing them before every decision?
