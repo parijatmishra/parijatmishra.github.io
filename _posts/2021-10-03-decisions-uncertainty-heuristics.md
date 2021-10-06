@@ -26,31 +26,36 @@ There are two ways to reduce risk:
 
 There are several techniques for reducing the cost of making a mistake, such as building low-cost minimum viable products to get early feedback and using software abstraction layers to make it easy to swap products. Let us assume our hypothetical startup has used such techniques to reduce the cost of making a mistake. What remains? The probability of choosing a non-optimal option, which is determined by the gaps in available information.
 
-Sometimes, we simply can't get more information. For example, in the case of the queuing system, while we've reduced the cost of error, the only way we can reduce the *probability* of error is to know what our future needs are. This may simply not be possible.
+Sometimes, we simply can't get more information. For example, in the case of the queuing system, while we've reduced the cost of error, the only way we can reduce the probability of error is to know what our future needs are. This may simply not be possible.
 
 At other times, we *could* get more information but the *value* of the information is not worth the *cost* of doing so. For example, the easiest way to find out if people will pay for our product with zero cost is to not build the product ourselves but let someone else do it. Their success or failure will give us very valuable information. But the cost of the information is that we don't have a startup at all, or at least we are late to the market and have lost the initial chunk of users. Most startups would say that the cost outweighs the value of this information.
 
+In a nutshell, there are times where we cannot or will not fill in gaps in available information, which creates uncertainty, which creates a probability that we will make a non-optimal decision, which creates risk.
+
 ## Uncertainty and Estimations
 
-So that leaves us with missing information. Can we do something about it?
-
-Yes. We can make *estimates* about the likelihood of different futures and choose the one most likely. Estimates are often expressed as beliefs concerning the likelihood of uncertain events. You have made an estimate if you've ever stated something like:
+Can we do something about the uncertainty created by missing information? Actually, we already do. We substitute missing information with *estimates* and make predictions based on them. You have made an estimate based prediction if you've ever stated something like:
 
 - I think that...
 - Chances are that...
 - It is unlikely that...
 
-We make estimates all the time. Good estimates reduce uncertainty and therefore the probability of making an incorrect decision, just like information does. It pays to get better at making estimates.
+Since we are making estimates all the time, it pays to get get better at making them. Good estimates reduce uncertainty and therefore the probability of making an incorrect decision, just like information does.
 
-There are two ways we can make better estimates. 1. We can increase our knowledge and skills. Greater knowledge helps us understand which variables are important which are not so, and the relationships between effort, resources and outcomes. 2. We can get better at judging uncertain quantities. The focus of this article is on the latter.
+To make better estimates, we can do two things.
+
+1. We can increase our knowledge. Greater knowledge improves our mental model of processes, inputs and outputs, and helps us identify which variables make the most impact on outputs.
+2. We can get better at judging uncertain quantities.
+
+I am assuming readers are well aware of the importance of knowledge and are doing all they can already in that regard. The focus of this article is on the latter.
 
 ## Estimations and Heuristics
 
-How does one make an estimate? What happens when we say "Chances are that..."?
+The problem with making estimates is that humans don't make them well, in most situations. Let's think about how does one make an estimate. What happens when we say "Chances are that..."?
 
-There is a lot of evidence that we employ two distinct modes of thinking: intuitive and quick (System 1) and systematic and plodding (System 2).
+Consider a problem our ancestors may have encountered, where good estimation was the difference between survival and death. Our proverbial ancestor is walking along a mountainous landscape, hunting and gathering. He spots a lion in the distance. He has to decide whether to run away and start hunting somewhere else, or maintain a cautious distance and continue on their way.
 
-Consider a problem our ancestors may have encountered, where a good decision was the difference between survival and death. Our proverbial ancestor is walking along a mountainous landscape, hunting and gathering. He spots a lion in the distance. He has to decide whether to run away and start hunting somewhere else, or maintain a cautious distance and continue on their way.
+There is a lot of evidence that humans employ two distinct modes of thinking: intuitive and quick (System 1) and systematic and plodding (System 2).
 
 Let's talk about the System 2 method of solving this problem first. This method starts by creating a model of the problem space including processes, inputs and outputs. Processes and inputs can have variables associated with them. We gather all reasonably available information. For the information we don't have, we *ascertain a range of values*. Then we do some calculations guided by the model. Finally, we express the result of the calculations as an estimate.
 
