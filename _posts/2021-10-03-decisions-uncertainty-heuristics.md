@@ -218,22 +218,22 @@ I am not saying that we should never adopt new tools. I am just pointing out tha
 
 ## Heuristic 3: Anchoring and Adjusting
 
-When faced with questions of the form:
+We often have to answer the question:
 
 > What is the likely value of X?
 
 which actually is the more complex question:
 
-> What is range of values of X that I am N% confident about?
+> What is range of values that X could have with N% probability?
 
-where *N* is the quantification of "likely", which is subjective. We substitute such questions with the simpler question:
+where *N* is just making the subjective term "likely" more concrete. We substitute such questions with the simpler algorithm:
 
-> Start with an initial guess number and adjust it up and down until we feel we've adjusted enough.
+> Start with an initial guess number and adjust it up and down; stop when we feel we've adjusted enough.
 
 There are two problems with this heuristic:
 
-* Our initial guess or estimate is influenced strongly by factors that are not relevant to the quantity being estimated
-* We don't adjust enough
+* Our initial guess or estimate is influenced strongly by factors that are not relevant to the quantity being estimated.
+* We don't adjust enough; our feeling of "enough" kicks in earlier than it should.
 
 
 ### Experimental Evidence
