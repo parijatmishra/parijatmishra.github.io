@@ -250,7 +250,7 @@ Anytime you are going to estimate a numerical value, stop and ask yourself: what
 
 And since we always have some anchor, it is best if the anchor is the *prior probability* of the class of things you are trying to make an estimate for. That is, before estimating the value of *x*, think of progressively more general classes *X1*, *X2*, ... it could belong to and see if you recall or can search for a reliable value for the class. Use that as your anchor before adjusting up or down using what information you have about *x*.
 
-Anytime you are adjusting quantities upwards or downwards to get a subjective feeling of "good enough", ask yourself---what is the basis of the magnitude of the adjustment. If there is not an objective answer, know that you are likely not adjusting enough.
+Anytime you are adjusting quantities upwards or downwards to get a subjective feeling of "good enough", ask yourself---what is the basis of the magnitude of the adjustment. If there is not an objective answer, know that you are more likely to be under-adjusting than over-adjusting.
 
 Be wary when negotiating prices with vendors. Always do your own estimation first (you don't have to disclose it). Otherwise, the vendor's initial number will become your anchor over which you will haggle (downwards of course) and will adjust insufficiently.
 
