@@ -214,7 +214,7 @@ Developers, especially those in startups, are usually quick to adopt new framewo
 * It is easier to recall problems with current tools than their strengths, simply because one spends less time and effort on things the tool is excellent at and much time on things the tool is not so good at. New tools may solve the problems current tools have, but are they as good at what the current tools do well?
 * If existing tools have problems that we found out the hard way, new tools may have their own non-obvious problems too. However, it is hard to imagine the ways new tools can fail since we haven't had deep experience with them. That does not mean the new tools won't have problems. We can and should invest time in finding out what those would be and have a plan to address them. Yet we often don't.
 
-I am not saying that we should never adopt new tools. I am just pointing out that enthusiasm about new tools is often inflated and objective data gathering not done due to blind spots created by the availability heuristic, leading to insufficient clarity about costs and benefits.
+I am not saying that we should never adopt new tools. I am just pointing out that enthusiasm about new tools is often inflated and objective data gathering not done due to blind spots created by the availability heuristic, leading to inaccurate estimates of costs vs benefits and insufficient experimentation and testing.
 
 ## Heuristic 3: Anchoring and Adjusting
 
