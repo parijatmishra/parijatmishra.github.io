@@ -3,75 +3,82 @@ layout: post
 title: Uncertainty, Mental Shortcuts, and Errors in Technology Decisions
 ---
 
-If you are a technology leader, you know you make decisions, big or small, all the time. You also know that each decision carries some risk. Risks arise from several sources. We know how to mitigate many of the sources, but one of them is insidious: **uncertainty due to lack of information**. Behavioral phychologists and economists have spent decades researching how humans make decisions under uncertainty, and have found that a very wide variety of errors in decisions arise due to a few---just three, in fact---mental shortcuts humans use on a daily basis. These shortcuts, while useful in some circumstances, create systematic and even predictable errors. Sadly, we are largely unaware we are using them. In this article I will discuss what we know about how humans deal with uncertainty intuitively, the kinds of errors this can create, and how to identify and stop the mental shortcuts that can lead us to make errors. I hope this will help you increase the quality of your decisions and reduce risk, with only a little effort.
+If you are a technology leader, you know you make decisions, big or small, all the time. You also know that each decision carries some risk. Risks arise from several sources. One of the most common ones in technology is uncertainty due to lack of information. Behavioral phychologists and economists have spent decades researching how humans make decisions under uncertainty. It turns out that a very wide variety of errors in decisions arise due to a few mental shortcuts humans use to make estimates of uncertain quantities. These shortcuts lead to errors, somewhat predictably. Sadly, we are largely unaware we are using them. In this article I will discuss elaborate on how uncertainty creates risk, mental shortcuts for estimating uncertain values, the kinds of errors the shortcuts create, and how to identify and stop the mental shortcuts. I hope this will help you increase the reduce risks and increase the quality of your decisions, with only a little effort.
 
 If you have seen instances where any of these shortcuts were being used, I would love to hear from you. I will update this article with your anecdotes if I find your stories clear and illustrative. Please do not share anything confidential, but do provide sufficient detail that a reader of this blog unfamiliar with your situation can understand the core idea.
 
 ## Risks and Uncertainty
 
-For concreteness, let us imagine we are a startup, building a web application as part of our product. We need to make many decisions: what to build, how to build it, how to run it etc. The first thing we need to make good decisions is *knowledge and skills*: web technologies, experience with applying them, and running applications. The better our knowledge and skills, the higher the likelihood that the quality of our decisions will be good.
+For concreteness, let us imagine we are a startup, building a web application as part of our product. We need to make many decisions: what to build, how to build it, how to run it etc. To make these decisions well, we need *information*. We need to know what features our web application should have. We need to know how heavily the application will be used to be able to run it at appropriate scale.
 
-Knowledge and skills are not enough, though: we also need *information*. We need to know what features our web application should have. We need to know how heavily the application will be used to be able to run it at appropriate scale. We often encounter gaps in available information. Consider these scenarios:
+We often encounter gaps in available information. Consider these scenarios:
 
 - The startup has done user surveys and research to indicate there is interest in a product, but the sample sizes are small and in artificial conditions. It does not know *for sure* if enough people will pay for that product to make the investment in developing and running it viable.
-- There are three client libraries for the database we have chosen: which one will satisfy our requirements best in terms of features and performance? We've read their documentation but the difference between them with respect to *our* feature and performance needs is not clear.
 - We are evaluating two queuing systems. One is easy to get started with and operate but does not scale horizontally. The other scales horizontally but is complicated to get started with and operate---we will have to invest more time and effort to use it. We don't know how much load our queuing system will need to support in future.
 
 A lack of information creates *uncertainty*, which in turn creates a *risk* that the option we choose will be incorrect. Let us define risk as *cost* of choosing the incorrect option times the *probability* of our choice being incorrect. The decision problem them becomes: which option has the lowest risk?
 
 There are two ways to reduce risk:
-1. Reduce the *cost* of making the wrong decision. There are several techniques. For example, the startup could build a so-called "minimum viable product" instead of a full-blown product to test the waters. We could build an abstraction layer on top of the queuing systems to allow us to switch the products in the future if we need to.
-2. Reduce the *probability* of making the wrong decision. We can do this by getting more information. We could write proofs-of-concept programs using each of the database client libraries to find out whether they are easy to use for our foreseeable use cases and what their performance is like.
+1. Reduce the *cost* of making the wrong decision.
+2. Reduce the *probability* of making the wrong decision.
 
-When making decisions, we should use both these methods to reduce the risk as much as we can. Let us assume our hypothetical startup has done so. What remains? Gap in information.
+There are several techniques for reducing the cost of making a mistake. The cost of making a product that users don't want is the time and effort that goes in creating it. We could reduce the cost of building the wrong product by building a lower cost "minimum viable product" and getting feedback from users. The cost of choosing an incorrect queuing system is that we will have to swap it out and change all our application code that depends on it. We can reduce this by creating a software abstraction layer that hides the differences between different queuing systems, making it possible to swap them out without changing our application code.
 
-Sometimes, we simply can't get the information. For example, we could study the queuing systems all we like, but we lack information about the future load.
+Let us assume our hypothetical startup has used techniques to reduce the cost of making a mistake. What remains? Gap in information.
 
-At other times, we *could* get more information but decide that the *value* of the information is not worth the *cost* of doing so. For example, our startup could choose to not build the product at all but wait for someone else to do so. If someone else succeeds, then we have the information we need: there are enough paying customers for our product. Now we can build the product ourselves with significantly reduced risk: this is the value of the additional information. The cost of the information is: losing the first mover advantage and a major chunk of the market, and losing the satisfaction of doing something innovative. We may decide it's not worth waiting.
+Sometimes, we simply can't get the information. For example, in the case of the queuing system, while we've reduced the cost of error, the only way we can reduce the *probability* of error is to know what our future needs are. This may simply not be possible.
 
-There are two additional sources of risk.
-
-1. Lack of knowledge and skills. If we don't have these, we won't even know what information to consider and what is uncertain.
-2. Biased motivation. Sometimes, decision makers are not motivated to make objectively correct decisions. For example, an engineering manager may not tell the CTO that the chances of his project failing is 90% and should be scrapped because the organizational culture makes it difficult to do so.
-
-Before making a decision, you should seek to eliminate these risks first, before focusing on informational risks. I am not going to discuss these risks further in this article.
+At other times, we *could* get more information but decide that the *value* of the information is not worth the *cost* of doing so.
 
 ## Uncertainty and Estimations
 
-Let's go back to the decision of which queuing product to choose. Let's say we decided to reduce the cost of choosing the incorrect product by creating an abstraction layer in our code and making it easier to switch products in the future. Now we still have to buy, install and run the product. This does take time, effort and money that would be wasted if our prediction about the future load turns out to be wrong. Can we do something about it?
+So that leaves us with missing information. Can we do something about it?
 
-Yes. We can make *estimates* about the likelihood of different futures and choose the one most likely. Estimation is the act of judging probabilities of outcomes or values. Good estimates reduce uncertainty and therefore the probability of making an incorrect decision, just like information does.
-
-You may philosophically disagree with the role of estimation in decision making. Your may be thinking: *Either I know something perfectly, or I don't know anything about it. How can I predict or estimate something I don't have information about? If I can't predict the future, I might as well rely on a coin toss---there's no point in trying to estimate.*
-
-I put it to you that you are making estimates all the time. Estimates are often expressed as beliefs concerning the likelihood of uncertain events. You have made an estimate if you've ever stated something like:
+Yes. We can make *estimates* about the likelihood of different futures and choose the one most likely. Estimates are often expressed as beliefs concerning the likelihood of uncertain events. You have made an estimate if you've ever stated something like:
 
 - I think that...
 - Chances are that...
 - It is unlikely that...
 
-Since you are doing it anyway, it pays to get better at making estimates. There are two parts to making good estimates. The first one is about increasing our knowledge and skills. The second is *behavioral*---actually applying the knowledge and skills. The focus of this article is on the second part: our *behavioral* tendency to use intuition to make estimates and how to combat it.
+We make estimates all the time. It pays to get better at making estimates. Good estimates reduce uncertainty and therefore the probability of making an incorrect decision, just like information does.
+
+There are two ways we can make better estimates. 1. We can increase our knowledge and skills. Greater knowledge helps us understand which variables are important which are not so, and the relationships between effort, resources and outcomes. 2. We can get better at judging uncertain quantities. The focus of this article is on the latter.
 
 ## Estimations and Heuristics
 
-How does one make an estimate? What happens when we say "Chances are that..."? There is a lot of evidence that we employ two distinct modes of thinking: intuitive and quick (System 1) and systematic and plodding (System 2).
-Let's talk about System 2 first. This method starts by creating a model of the problem space including causes, processes, and effects. Causes and processes can have parameters or variables associated with them (how far is that lion? how hungry?). Then we gather all reasonably available information (the lion could get to me in 30 seconds). For the information we don't have, we *ascertain a range of values* (the lion is sitting next to a carcass, so probably not very hungry). Then we do some calculations guided by the model (lion close but not very hungry). Finally express the result of the calculations as an estimate (chances are that the lion is not going to chase me). Often, we don't have the time to go through all these steps. When time is limited we *do not* simply dial down the precision of System 2 thinking to make it faster.
+How does one make an estimate? What happens when we say "Chances are that..."?
 
-No. We use an entirely different process. The human brain evolved to estimate probabilities quickly with limited accuracy, rather than slowly and great accuracy. Our ancestors had to make a lot of decisions with imperfect information in limited time. Here are three "just so" stories that are plausible about decisions our ancestors would have had to make and how they'd make them:
+There is a lot of evidence that we employ two distinct modes of thinking: intuitive and quick (System 1) and systematic and plodding (System 2).
 
-* We are gathering food in the forest. We encounter a colorful berry that we haven't quite seen before. Food is scarce and we will be rewarded for getting more if the berry is edible. But if it is poisonous then we are likely to be punished. Is the berry safe to eat? It's a hard question. We substitute this question with the easier question: is this berry similar to my mental stereotype of berries known to be safe to eat?
-* We are stalking animals to hunt in the prairie grass. We spot some movement in the grass. We need to decide the relative liklihood of a movement in the grass is due to a tiger (catastrophic) or gazelle (benign or beneficial). This is a hard question that requires knowing the relative frequencies of tiger and gazelle populations in the area of interest at the time of year. We substitute it with the easier question: how many gazelles and tigers can I recall seeing lately and what was the relative frequency?
-* We are stalking animals to hunt in the prairie grass. It takes time to find and stalk them and we get only two chances a day on average. We've spotted some animals. We need to decide whether we can throw our spear far and accurately enough to hit an animal with >50% probability, or if should we try to get closer but risk spooking the animal. This is a hard question that would require us to keep track of the distances of our past throws, the conditions under which we executed them and what we know about the sensitivity of the animal. We substitute it with the easier question: what was the distance of my last successful throw, and am I feeling strong/weaker than that time?
+Consider a problem our ancestors may have encountered, where a good decision was the difference between survival and death. Our proverbial ancestor is walking along a mountainous landscape, hunting and gathering. He spots a lion in the distance. He has to decide whether to run away and start hunting somewhere else, or maintain a cautious distance and continue on their way.
 
-Did the above stories sound very reasonable? Did you find it hard to imagine how else could our ancestors have made these decisions? If so, you and I can agree that the heuristics used there are very useful. While the above are made up stories, there is a lot of evidence that the substitution of complex tasks with specific simpler heuristics does occur.
+Let's talk about the System 2 method of solving this problem first. This method starts by creating a model of the problem space including processes, inputs and outputs. Processes and inputs can have variables associated with them. We gather all reasonably available information. For the information we don't have, we *ascertain a range of values*. Then we do some calculations guided by the model. Finally, we express the result of the calculations as an estimate.
 
-**Our brain is constantly substituting complex estimation problems with simpler ones, i.e., using heuristics, without us even realizing it. We think the two problems are the same when they are not.**
+In our ancestors case, the process is *hungry lions eat people*, and *if the lion we to chase me, I need enough head start to run away*. The input variables are *How quickly can the lion get to me?* and *How hungry is the lion?*. Our ancestor may have very good information about a lion's speed and conclude *The lion can get to me in 30 seconds*. They may not have good information about the lion's hunger but could make an estimate such as *The lion is sitting next to a half-eaten carcass; it is probably not very hungry and therefore unlikely to chase me if I stay some distance away*. Conclusion: proceed cautiously.
 
-We use these heuristics even when we do have the time to follow a more accurate process. We can't help it---the human brain is lazy and yet does a very good job of convincing us that it has done the work. Have you ever made a decision that felt "just right" but found it hard to explain why? Have you made a decision of major consequence based on "gut feel"? Have you mulled over a problem where suddenly something went "ting!" in your mind, and you arrived at the decision---and moreover, you got a feeling of satisfaction and convinction that the decision was right?
+Often, we don't have the time to go through all these steps. When time is limited, do we use System 2, perhaps with fewer calculations? Surely our ancestor did not do detailed measurements of lion's distance and speed, or look up a lion's dietary requirements in a book.
 
-Unfortunately, these heuristics are not just somewhat less accurate ways of making estimates. Since they are answering a very different question from the original problem, they can lead to systematic errors and depending on the circumstances, severe ones. Combined with the fact we use them without even realizing we are doing so, we have a double whammy: we don't know that some of our estimation methods are error-prone and we don't know when we are using those methods.
+When we don't have time, our brains an entirely different process called System 1. System 1 works via mental shortcuts, or **heuristics**, to make estimates. Heuristics work by not answering the original estimation problem, but subsituting them with a subtly different and easier problem and answering that.
 
-The plan for the rest of the article is to describe three common heuristics and the issues with them.
+In our ancestor's case, using System 1, their thinking would go along these lines: last week I heard about a hunter getting eaten by a lion. Lions are dangerous. It's not worth thinking about whether or not the lion is likely to chase me, because the cost of making an error there is very high. Conclusion: run away.
+
+Alternatively, our ancestor may have thought like this: I've not heard of a hunter getting eaten by a lion in months. That only happens in the dry, lean seasons. There is probably no reason to run away. Conclusion: proceed cautiously.
+
+As you can see, in the made up story above, our ancestor used a more intuitive way of solving the problem that depended on subjective experience and recollection. They used a "mental shortcut" or heuristic: what do I recall about similar situations.
+
+You and I can agree that heuristics have served our ancestors well and kept them safe. They are useful, especially when time is scarce.
+
+Unfortunately, we use heuristics even when we *do have the time* to follow a more accurate process, and where the risk of getting things wrong is economic, not life and death. We do this unintentionally. The human brain is lazy and yet does a very good job of convincing us that it has done the work.
+
+Have you ever made a decision that felt "just right" but found it hard to explain why? Have you made a decision of major consequence based on a strong "gut feeling"? Have you mulled over and over on a problem where suddenly something went "ting!" in your mind, and you arrived at the decision, and moreover, were very confident that your decision is right? If so, your brain probably used a heuristic.
+
+Since heuristics work by answering a different question from the original problem, they can lead to systematic errors and depending on the circumstances, severe ones. Combined with the fact we use them without even realizing we are doing so, we have a double whammy: we don't know that some of our estimation methods are error-prone and we don't know when we are using those methods.
+
+There are three core heuristics that I will discuss in this article.
+
+* Representativeness: our brain substitutes the hard question of *How likely?* with the simpler question *How similar?*.
+* Availability: our brain substitutes the hard question of *How frequent?* with the simpler question *How easy to recall?*
+* Anchoring and Adjustment: our brain substitutes the hard question of *how much* with the simpler question of *pick a number and adjust up or down---do you feel you've adjusted enough?*.
 
 ## Heuristic 1: Representativeness
 
@@ -83,18 +90,16 @@ we substitute is with a simpler problem:
 
 > how much does **a** resemble **A**?
 
-If *a* is highly **representative** of *A*, it is assumed that *a* is highly **likely** to be an instance of *A*. Sounds logical? The problem is that *a* could potentially belong to several classes: *A*, *B*, *C*,... (Even if there are no explicit multiple classes, there are at least two: *A* and *not A*). The probability that *a* belongs to *A* depends on two factors:
+If *a* is highly **representative** of *A*, it is assumed that *a* is highly **likely** to be an instance of *A*. Sounds logical? The probability that *a* belongs to *A* depends on two factors:
 
 1. How probable are the classes *A* and *not A*, in the first place? This is called *prior probability*. If we knew nothing about *a*, its probability of *belonging to A* is simply the *prior probability of A*.
 2. Now, given information about *a*, how much does that information increase or decrease the probability of *a* belonging to *A*.
 
-This is a fundamental concept in probability theory---conditional probability. However, the heuristic of representativeness ignores probability (1). When all the classses *a* could belong to are roughly equally numerous then the heuristic serves well. Otherwise, it does not. Now let us consider the errors it could lead to.
+This is a fundamental concept in probability theory called conditional probability, where prior probability is an essential component of the final probability. However, the heuristic of representativeness ignores probability prior priobabilities.
 
 ### Experimental Evidence
 
 An experiment was conducted where subjects had to estimate the probability that an individual, picked from a population of engineers and lawyers, was actually an engineer. The subjects were divided into several groups and given different information.
-
-Here, the instance is *a*, and the classes of interest are engineers (*A*) and lawyers (*not A*).
 
 #### Predictions when information about *a* was not present
 
