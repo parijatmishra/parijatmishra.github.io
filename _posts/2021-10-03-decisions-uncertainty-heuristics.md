@@ -134,15 +134,15 @@ The description could have tweaked the prior probabilities, but not by a lot. Ye
 
 #### Predictions when information about the individual was present but had no predictive power
 
-* Group C1: subjects were given the same population statistics as group A1 (70 engineers and 30 lawyers) and also a personality description. However, the descriptions were deliberately designed not to match any occupational stereotypes and more generally, not give any clues as to occupation. For example, a description could be "Dick is a 30 year old man. He is married with no children. A man of high ability and motivation, he promises to be quite successful in his field. He is well liked by his colleagues." This group on average predicted that the individual is equally likely to be an engineer or lawyer.
+* Group C1: subjects were told that the poupulation consisted of 70 engineers and 30 lawyers. Additionally they were given detailed personality descriptions. However, the descriptions were deliberately designed not to match any occupational stereotypes and more generally, not give any clues as to occupation. For example, a description could be "Dick is a 30 year old man. He is married with no children. A man of high ability and motivation, he promises to be quite successful in his field. He is well liked by his colleagues." This group on average predicted that the individual is equally likely to be an engineer or lawyer.
 
-* Group C2: subjects were given the same population statistics as group A2 (30 engineers and 70 lawyers) and personality descriptions like group C1. This group also on average made the same predictions as group C1: the individual is equally likely to be an engineer or lawyer.
+* Group C2: subjects were told that the poupulation consisted of 30 engineers and 70 lawyers. They were also given the same personality descriptions like group C1. This group also on average made the same predictions as group C1.
 
-In this case, the groups got inconclusive information. The information by itself does not predict anything. They should have disregarded the information and just used prior probabilities like group A1 and A2. However, the inconclusive information dominated their thought process. In other words, subjects with no additional information (groups A1 and A2) made better predictions than subjects given useless information (groups C1 and C2).
+In this case, the additional information about the individual that the groups got was deliberaly inconclusive. They should have disregarded the information and just used prior probabilities like group A1 and A2. However, the inconclusive information dominated their thought process and erased considerations of prior probability. In other words, subjects with no additional information (groups A1 and A2) made better predictions than subjects given useless additional information (groups C1 and C2).
 
 #### Experimental Evidence: Summmary
 
-The experiment has been replicated in many different ways. It is well established that humans tend to think that "sameness"---no matter how tenuous---is a strong predictor of "likely" and do not consider prior probabilities. Somewhat alarmingly, even useless information, where "sameness" does not dominate one way or other, is enough to erase the consideration of prior probabilities. As we saw above, it leads to absurd predictions.
+Many experiments have been confirmed the existence of the representativeness heuristic in different scenarios. It is well established that humans tend to think that "sameness"---no matter how tenuous---is a strong predictor of "likely" and do not consider prior probabilities. Somewhat alarmingly, even useless information, where "sameness" does not dominate one way or other, is enough to erase the consideration of prior probabilities. As we saw above, it leads to absurd predictions.
 
 ### Countering the Heuristic
 
