@@ -40,7 +40,7 @@ Yes. We can make *estimates* about the likelihood of different futures and choos
 - Chances are that...
 - It is unlikely that...
 
-We make estimates all the time. It pays to get better at making estimates. Good estimates reduce uncertainty and therefore the probability of making an incorrect decision, just like information does.
+We make estimates all the time. Good estimates reduce uncertainty and therefore the probability of making an incorrect decision, just like information does. It pays to get better at making estimates.
 
 There are two ways we can make better estimates. 1. We can increase our knowledge and skills. Greater knowledge helps us understand which variables are important which are not so, and the relationships between effort, resources and outcomes. 2. We can get better at judging uncertain quantities. The focus of this article is on the latter.
 
@@ -93,9 +93,9 @@ we substitute is with a simpler problem:
 If *a* is highly **representative** of *A*, it is assumed that *a* is highly **likely** to be an instance of *A*. Sounds logical? The probability that *a* belongs to *A* depends on two factors:
 
 1. How probable are the classes *A* and *not A*, in the first place? This is called *prior probability*. If we knew nothing about *a*, its probability of *belonging to A* is simply the *prior probability of A*.
-2. Now, given information about *a*, how much does that information increase or decrease the probability of *a* belonging to *A*.
+2. Now, given information about *a*, how much does it change the prior probability?
 
-This is a fundamental concept in probability theory called conditional probability, where prior probability is an essential component of the final probability. However, the heuristic of representativeness ignores probability prior priobabilities.
+This is a fundamental concept in probability theory called conditional probability, where prior probability is an essential component of the final probability. However, the heuristic of representativeness ignores prior priobabilities.
 
 ### Experimental Evidence
 
