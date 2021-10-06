@@ -105,9 +105,9 @@ An experiment was conducted where subjects had to estimate the probability that 
 
 * Group A1: subjects were told nothing about the individual but were told that the poupulation consisted of 70 engineers and 30 lawyers. As expected, the group on average predicted that the individual was 70% likely to be an engineer.
 
-* Group A2: subjects were told nothing about the individual but were told that the population consisted of 30 engineers and 70 lawyers. This group on average predicted that the individual was 30% likely to be an engineer.
+* Group A2: subjects were told nothing about the individual but were told that the population consisted of 30 engineers and 70 lawyers. As expected, the group on average predicted that the individual was 30% likely to be an engineer.
 
-Groups A1 and A2 used the prior probabilities correctly, as no other information was available.
+Groups A1 and A2 used only the prior probabilities (correctly), as no other information was available. They also did not show a bias towards any occupation.
 
 #### Predictions when information about the individual was present had predictive power
 
