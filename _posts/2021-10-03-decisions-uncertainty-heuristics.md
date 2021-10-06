@@ -95,12 +95,12 @@ we substitute is with a simpler problem:
 
 > how much does **a** resemble **A**?
 
-If *a* is highly **representative** of *A*, it is assumed that *a* is highly **likely** to be an instance of *A*. Sounds logical? The probability that *a* belongs to *A* depends on two factors:
+If *a* is highly *representative* of *A*, the heuristic assumes that *a* is highly *likely* to be an instance of *A*. Sounds logical? Not so, mathematically. The probability that *a* belongs to *A* depends on two independent variables:
 
-1. How probable are the classes *A* and *not A*, in the first place? This is called *prior probability*. If we knew nothing about *a*, its probability of *belonging to A* is simply the *prior probability of A*.
-2. Now, given information about *a*, how much does it change the prior probability?
+1. How probable are the classes *A* and *not A*, in the first place, independent of any *a*?
+2. Given the information about *a* how likely is it an instance of *A*, independent of the probability of *A* having occured.
 
-This is a fundamental concept in probability theory called conditional probability, where prior probability is an essential component of the final probability. However, the heuristic of representativeness ignores prior priobabilities.
+These variables are then combined to give a final probability that *a* belongs to *A*. This is a fundamental concept in probability theory called conditional probability. However, the heuristic of representativeness ignores probability (1) and gives too much importance to probability (2). This leads to bad estimates.
 
 ### Experimental Evidence
 
