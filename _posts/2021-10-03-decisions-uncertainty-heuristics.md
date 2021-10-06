@@ -184,7 +184,9 @@ Here, we assume that likely (equivalently: more frequently occurring) things are
 * More likely things will turn up more frequently if we search in any specific knowledge base
 * More likely things are easier to imagine
 
-The way our brain works, some things are easier to recall than others unrelated to frequency regardless of their actual frequency. Some things are easier to imagine than others. Knowledge bases may have skew in which kinds of things they store and make available.
+The way our brain works, some things are easier to recall than others and some things are easier to imagine than others, regardless of their actual frequency. Knowledge bases may have skew in which kinds of things they store and make available. For example, there are more blog articles and marketing literature about the successful application of a technology than failed ones, providing a skewed view of how applicable that technology is.
+
+The heuristic of availability ignores the possibility that our ability to recall or search for instances of a class may not return representative data.
 
 ### Experimental Evidence
 
@@ -196,7 +198,7 @@ It is a common experience that subjective probability estimates of traffic accid
 
 ### Countering the Heuristic
 
-In all the above, and more, observations, subjects confused ease of recollection with actual frequency or lilelihood, and moreover were quite confident that their judgment was accurate. Lifelong experience has taught us that, in general, instances of large classes are recalled better and faster than instances of less frequent classes. So this heuristic serves a useful purpose. However, in technology, we often encounter situations that are novel to us or where we simply have not been exposed to the various classes equally. To make objectively good decisions, we need to suspend this heuristic. This heuristic is subtly different from Representativeness: it does not use *similarity* of an instance to a class, but only examines at the relative frequency of classes.
+Lifelong experience has taught us that, in general, instances of large classes are recalled better and faster than instances of less frequent classes. So this heuristic serves a useful purpose. However, in technology, we often encounter situations that are novel to us or where we simply have not been exposed to the various classes equally. To make objectively good decisions, we need to suspend this heuristic.
 
 When making technology decisions of the form:
 * What is the probability of outcome *A* happening (or not happening)?
