@@ -101,7 +101,7 @@ This is a fundamental concept in probability theory called conditional probabili
 
 An experiment was conducted where subjects had to estimate the probability that an individual, picked from a population of engineers and lawyers, was actually an engineer. The subjects were divided into several groups and given different information.
 
-#### Predictions when information about *a* was not present
+#### Predictions when information about the individual was not present
 
 * Group A1: subjects were told nothing about the individual but were told that the poupulation consisted of 70 engineers and 30 lawyers. As expected, the group on average predicted that the individual was 70% likely to be an engineer.
 
@@ -109,7 +109,7 @@ An experiment was conducted where subjects had to estimate the probability that 
 
 Groups A1 and A2 used the prior probabilities correctly, as no other information was available.
 
-#### Predictions when information about *a* was present and of predictive power
+#### Predictions when information about the individual was present had predictive power
 
 * Group B1: subjects were given the same population numbers as group A1 (70 engineers and 30 lawyers) and additionally were given a brief fictitious "personality description" of the individual. The description had very little information but would match the stereotype of an engineer or lawyer. For exampke, one description was "an introverted, analytical man". This group on average estimated the likelihood of the individual being an engineer or lawyer to be almost 100%, depending on what stereotype they were presented.
 
@@ -121,7 +121,7 @@ Consider: are you sure *all* engineers are introverted and analytical? If not, t
 
 The description could have tweaked the prior probabilities, but not by a lot. Yet, given just a smidgen of information of dubious value, both groups B1 and B2 ignored the prior probabilities entirely.
 
-#### Predictions when information about *a* was present and inconclusive
+#### Predictions when information about the individual was present but had no predictive power
 
 * Group C1: subjects were given the same population statistics as group A1 (70 engineers and 30 lawyers) and also a personality description. However, the descriptions were deliberately designed not to match any occupational stereotypes and more generally, not give any clues as to occupation. For example, a description could be "Dick is a 30 year old man. He is married with no children. A man of high ability and motivation, he promises to be quite successful in his field. He is well liked by his colleagues." This group on average predicted that the individual is equally likely to be an engineer or lawyer.
 
