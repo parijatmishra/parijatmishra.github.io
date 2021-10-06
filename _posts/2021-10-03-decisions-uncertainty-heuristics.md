@@ -103,19 +103,21 @@ An experiment was conducted where subjects had to estimate the probability that 
 
 #### Predictions when information about the individual was not present
 
-* Group A1: subjects were told nothing about the individual but were told that the poupulation consisted of 70 engineers and 30 lawyers. As expected, the group on average predicted that the individual was 70% likely to be an engineer.
+* Group A1: subjects were told that the poupulation consisted of 70 engineers and 30 lawyers. They were given no information about the individual. As expected, the group on average predicted that the individual was 70% likely to be an engineer.
 
-* Group A2: subjects were told nothing about the individual but were told that the population consisted of 30 engineers and 70 lawyers. As expected, the group on average predicted that the individual was 30% likely to be an engineer.
+* Group A2: subjects were told that the poupulation consisted of 30 engineers and 70 lawyers. They were given no information about the individual. As expected, the group on average predicted that the individual was 30% likely to be an engineer.
 
 Groups A1 and A2 used only the prior probabilities (correctly), as no other information was available. They also did not show a bias towards any occupation.
 
 #### Predictions when information about the individual was present had predictive power
 
-* Group B1: subjects were given the same population numbers as group A1 (70 engineers and 30 lawyers) and additionally were given a brief fictitious "personality description" of the individual. The description had very little information but would match the stereotype of an engineer or lawyer. For exampke, one description was "an introverted, analytical man". This group on average estimated the likelihood of the individual being an engineer or lawyer to be almost 100%, depending on what stereotype they were presented.
+* Group B1: subjects were told that the poupulation consisted of 70 engineers and 30 lawyers. Additionally they were given a brief fictitious "personality description" of the individual. The description had very little information but would match the stereotype of an engineer or lawyer. For exampke, one description was "an introverted, analytical man". This group on average estimated the likelihood of the individual being an engineer or lawyer, depending on what stereotype they were presented, to be almost 100%.
 
-* Group B2: subjects were given the same population statistics as group A2 (30 engineers and 70 lawyers) and additionally were given a brief fictitious "personality description" of the individual, like group B1. They too ignored the population statistic and made predictions just like group B1, depending on what stereotype they were presented.
+* Group B2: subjects were told that the poupulation consisted of 30 engineers and 70 lawyers. Additionally they were given a brief fictitious "personality description" of the individual, like group B1. They made predictions similar to group B1.
 
-Arguably, "an introverted, analytical man" does match the stereotype of an engineer. (At least, that's what the authors of the experimental study concluded. I mean no offense to any profession.) That is to say, the instance *resembles* the class. But how much information does this description contain? More precisely, how much predictive pwoer does this information have?
+Both group B1 and B2 seemingly completely ignored the proportion of engineers in the population when deciding whether a randomly picked individual would be an engineer. They gave enormous weight to the piece of information they had. They effectively said "if the description of the individual resembles an engineer, the individual is highly likely to be an engineer".
+
+Arguably, "an introverted, analytical man" does match the stereotype of an engineer. (At least, that's what the authors of the experimental study concluded. I mean no offense to any profession.) But how much information does this description contain? More precisely, how much predictive power does this information have?
 
 Consider: are you sure *all* engineers are introverted and analytical? If not, there is a percentage of engineers who do not match the description. Consider: can lawyers be introverted and analytical? If so, the description could match a portion of lawyers. Consider: will all introverted and analytical people seek engineering as an occupation? There are other factors involved: is there a good and afforable engineering school they have access to? Were any of their parents or influential parental figures lawyers? Was the school debate team captain a more welcoming person or the head of the physics club? Did their school have luminary alumnis who were engineers, or lawyers? What about other unknown personality characteristics? Thinking of these factors, would you say the conclusion that the description predicts an engineer is a slam-dunk?
 
