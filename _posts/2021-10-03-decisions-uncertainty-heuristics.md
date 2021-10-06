@@ -9,12 +9,12 @@ If you have seen instances where any of these shortcuts were being used, I would
 
 ## Risks and Uncertainty
 
-For concreteness, let us imagine we are a startup, building a web application as part of our product. We need to make many decisions: what to build, how to build it, how to run it etc. To make these decisions well, we need *information*. We need to know what features our web application should have. We need to know how heavily the application will be used to be able to run it at appropriate scale.
+For concreteness, let us imagine we are a startup, building a web application as part of our product. We need to make many decisions: what to build, how to build it, how to run it etc. To make good decisions, we need *information*. We need to know the priorities of different features our web application could have so we spend our meager resources on the ones that users want the most. We need to know how heavily the application will be used to be able to run it with good performance without over-provisioning it because that would be wasteful.
 
 We often encounter gaps in available information. Consider these scenarios:
 
-- The startup has done user surveys and research to indicate there is interest in a product, but the sample sizes are small and in artificial conditions. It does not know *for sure* if enough people will pay for that product to make the investment in developing and running it viable.
-- We are evaluating two queuing systems. One is easy to get started with and operate but does not scale horizontally. The other scales horizontally but is complicated to get started with and operate---we will have to invest more time and effort to use it. We don't know how much load our queuing system will need to support in future.
+- The startup has done user surveys and research to indicate there is interest in its product, but the sample sizes are small and in artificial conditions. It does not know for sure if enough people will pay for that product to make the investment in developing and running it viable.
+- We are evaluating two queuing systems. One is easy to get started with and operate but does not scale well. The other scales well but is complicated to get started with and operate---we will have to invest more time and effort to use it. We don't know how much load our queuing system will need to support in future.
 
 A lack of information creates *uncertainty*, which in turn creates a *risk* that the option we choose will be incorrect. Let us define risk as *cost* of choosing the incorrect option times the *probability* of our choice being incorrect. The decision problem them becomes: which option has the lowest risk?
 
@@ -24,11 +24,11 @@ There are two ways to reduce risk:
 
 There are several techniques for reducing the cost of making a mistake. The cost of making a product that users don't want is the time and effort that goes in creating it. We could reduce the cost of building the wrong product by building a lower cost "minimum viable product" and getting feedback from users. The cost of choosing an incorrect queuing system is that we will have to swap it out and change all our application code that depends on it. We can reduce this by creating a software abstraction layer that hides the differences between different queuing systems, making it possible to swap them out without changing our application code.
 
-Let us assume our hypothetical startup has used techniques to reduce the cost of making a mistake. What remains? Gap in information.
+Let us assume our hypothetical startup has used techniques to reduce the cost of making a mistake. What remains? Gaps in available information.
 
-Sometimes, we simply can't get the information. For example, in the case of the queuing system, while we've reduced the cost of error, the only way we can reduce the *probability* of error is to know what our future needs are. This may simply not be possible.
+Sometimes, we simply can't get more information. For example, in the case of the queuing system, while we've reduced the cost of error, the only way we can reduce the *probability* of error is to know what our future needs are. This may simply not be possible.
 
-At other times, we *could* get more information but decide that the *value* of the information is not worth the *cost* of doing so.
+At other times, we *could* get more information but the *value* of the information is not worth the *cost* of doing so. For example, the easiest way to find out if people will pay for our product with zero cost is to not build the product ourselves but let someone else do it. Their success or failure will give us very valuable information. But the cost of the information is that we don't have a startup at all, or at least we are late to the market and have lost the initial chunk of users. Most startups would say that the cost outweighs the value of this information.
 
 ## Uncertainty and Estimations
 
