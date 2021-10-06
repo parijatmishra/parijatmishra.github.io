@@ -256,7 +256,9 @@ Be wary when negotiating prices with vendors. Always do your own estimation firs
 
 # Closing remarks
 
-There is much literature on the topic of [cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases) and exhortations on avoiding them. There are a great many biases. It seems none of our mental faculties are free from problematic errors. While it is important to know about cognitive biases in general, and specific one in particular, to hopefully avoid and make better judgments, can anyone really remembers all of them and spot them when they are happening? There are just too many. Is there a more tractable way of improving decision making than carry a thick tome listing all our biases and neurotically thumbing them before every decision?
+There is much literature on the topic of [cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases) and exhortations on avoiding them. There are a great many biases. Reading them, one could be forgiven for concluding that no part of our mind really works.
+
+While it is important to know about cognitive biases in general, and specific one in particular, to hopefully avoid and make better judgments, can anyone really remembers all of them and spot them when they are happening? There are just too many. Is there a more tractable way of improving decision making than carry a thick tome listing all our biases and neurotically thumbing them before every decision?
 
 Heuristics are a better mental model for improving decisions. For one, they are fewer in number and easier to remember (I use the mnemonic **RAA** for **R**epresentativeness, **A**vailability, **A**nchoring and Adjusting). Secondly---and beware that this is just my speculation and I've not seen any peer reviewed evidence for this---it seems they can explain many biases. For e.g., the so-called [Survivorship Bias](https://en.wikipedia.org/wiki/Survivorship_bias) and [Frequency Illusion](https://en.wikipedia.org/wiki/Frequency_illusion) can be be explained by the Availability heuristic. [Agent detection](https://en.wikipedia.org/wiki/Agent_detection) can be explained by Representativeness.
 
