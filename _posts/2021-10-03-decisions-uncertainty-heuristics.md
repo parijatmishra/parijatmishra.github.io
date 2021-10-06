@@ -207,7 +207,7 @@ When making technology decisions of the form:
 
 ask yourself if you are depending purely on your ability to recall or mentally "search" for instances of each class? If so, consider if you've been equally exposed to the various classes and capable of recalling them with equal ease? If not, you may have to stop yourself and do a more objective, mechanical evaluation.
 
-Let me illustrate this with a few common observations I have had in technology.
+Let me illustrate this with an observation I have had in technology.
 
 Developers, especially those in startups, are usually quick to adopt new frameworks and programming languages over ones they are quite familiar with. Senior engineers and architects often say/feel: "it is time to redesign X completely from scratch". If asked, they will cite the strengths of the new framework/language/architecture and how it solves the problems they have with their existing tools. The availability heuristic is working in two ways here:
 
