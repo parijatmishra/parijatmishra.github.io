@@ -16,15 +16,15 @@ We often encounter gaps in available information. Consider these scenarios:
 - The startup has done user surveys and research to indicate there is interest in its product, but the sample sizes are small and in artificial conditions. It does not know for sure if enough people will pay for that product to make the investment in developing and running it viable.
 - We are evaluating two queuing systems. One is easy to get started with and operate but does not scale well. The other scales well but is complicated to get started with and operate---we will have to invest more time and effort to use it. We don't know how much load our queuing system will need to support in future.
 
-A lack of information creates *uncertainty*, which in turn creates a *risk* that the option we choose will be incorrect. Let us define risk as *cost* of choosing the incorrect option times the *probability* of our choice being incorrect. The decision problem them becomes: which option has the lowest risk?
+A lack of information creates *uncertainty*, which in turn makes it probable that the option we choose is not the one that would lead to the best outcome.
+
+Let us define risk as the *probability* that the option we choose is not the best one multiplied by *cost* that we will incur if our option indeed did not turn out to be the best one.
 
 There are two ways to reduce risk:
 1. Reduce the *cost* of making the wrong decision.
 2. Reduce the *probability* of making the wrong decision.
 
-There are several techniques for reducing the cost of making a mistake. The cost of making a product that users don't want is the time and effort that goes in creating it. We could reduce the cost of building the wrong product by building a lower cost "minimum viable product" and getting feedback from users. The cost of choosing an incorrect queuing system is that we will have to swap it out and change all our application code that depends on it. We can reduce this by creating a software abstraction layer that hides the differences between different queuing systems, making it possible to swap them out without changing our application code.
-
-Let us assume our hypothetical startup has used techniques to reduce the cost of making a mistake. What remains? Gaps in available information.
+There are several techniques for reducing the cost of making a mistake, such as building low-cost minimum viable products to get early feedback and using software abstraction layers to make it easy to swap products. Let us assume our hypothetical startup has used techniques to reduce the cost of making a mistake. What remains? Gaps in available information.
 
 Sometimes, we simply can't get more information. For example, in the case of the queuing system, while we've reduced the cost of error, the only way we can reduce the *probability* of error is to know what our future needs are. This may simply not be possible.
 
