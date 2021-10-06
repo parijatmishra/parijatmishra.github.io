@@ -198,7 +198,7 @@ It is a common experience that subjective probability estimates of traffic accid
 
 ### Countering the Heuristic
 
-Lifelong experience has taught us that, in general, instances of large classes are recalled better and faster than instances of less frequent classes. So this heuristic serves a useful purpose. However, in technology, we often encounter situations that are novel to us or where we simply have not been exposed to the various classes equally. To make objectively good decisions, we need to suspend this heuristic and look harder for objective data.
+Lifelong experience has taught us that, in general, instances of large classes are recalled better and faster than instances of less frequent classes. So this heuristic serves a useful purpose. However, in technology, we often encounter situations that are novel to us or where we simply have not been exposed to the various classes equally. To make good decisions, we need to suspend this heuristic and look harder for objective data.
 
 When making technology decisions of the form:
 * What is the probability of outcome *A* happening (or not happening)?
@@ -211,7 +211,7 @@ Let me illustrate this with an observation I have had in technology.
 
 Developers, especially those in startups, are usually quick to adopt new frameworks and programming languages over ones they are quite familiar with. Senior engineers and architects often say/feel: "it is time to redesign X completely from scratch". If asked, they will cite the strengths of the new framework/language/architecture and how it solves the problems they have with their existing tools. The availability heuristic is working in two ways here:
 
-* It is easier to recall problems with current tools than their strengths, simply because one spends less time and effort on things the tool is excellent at and much time on things the tools is not so good at. New tools may solve the problems current tools have, but are they as good at what the current tools do well?
+* It is easier to recall problems with current tools than their strengths, simply because one spends less time and effort on things the tool is excellent at and much time on things the tool is not so good at. New tools may solve the problems current tools have, but are they as good at what the current tools do well?
 * If existing tools have problems that we found out the hard way, new tools may have their own non-obvious problems too. However, it is hard to imagine the ways new tools can fail since we haven't had deep experience with them. That does not mean the new tools won't have problems. We can and should invest time in finding out what those would be and have a plan to address them. Yet we often don't.
 
 I am not saying that we should never adopt new tools. I am just pointing out that enthusiasm about new tools is often inflated and objective data gathering not done due to blind spots created by the availability heuristic, leading to insufficient clarity about costs and benefits.
