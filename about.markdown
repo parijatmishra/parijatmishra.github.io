@@ -4,15 +4,21 @@ title: About
 permalink: /about/
 ---
 
-Welcome to my personal site. My name is Parijat Mishra. I currently work at
-[Sonar] as Field CTO: talking to our customer and partners on the one hand, and
-our engineering, marketing and sales on the other hand, trying to make our
-products better and more useful for all.
+My name is Parijat Mishra. Welcome to my personal site. Everything here is my
+own opinion and not the views of my current or former employers.
 
-My prior roles were Head Of Engineering - Infrastructure and Operations at
-Hyphen Group (now MoneyHero Group), and Head of Technology, Digital Native
-Businesses, [Amazon Web Services] Singapore, where I manager a team of stellas
-[Solutions Architects].
+I currently work as Field CTO at **[Sonar]**, the creators of SonarQube,
+SonarCloud and SonarLint. My job is to talk to our customers on the one hand,
+and our engineering, marketing and sales on the other hand, and try to make our
+products more useful and accessible to all.
+
+Before this I was a Head of Engineering at **Hyphen Group** (now **[MoneyHero
+Group]**) where I managed multiple teams that managed the company's internal and
+external facing technology infrastruct. Prior to that I was Head of Technology
+at [Amazon Web Services] Singapore (where I managed a team of stellas [Solutions
+Architects]). Look at my [LinkedIn
+Profile](https://www.linkedin.com/in/parijatmishra/) if you want to know more
+about my career.
 
 In and out of work, my two favorite activities are to ask "How can we make this
 better?" and "How do we make this problem go away?". I look for answers in
