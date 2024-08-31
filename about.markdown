@@ -11,7 +11,7 @@ products better and more useful for all.
 
 My prior roles were Head Of Engineering - Infrastructure and Operations at
 Hyphen Group (now MoneyHero Group), and Head of Technology, Digital Native
-Businesses, ASEAN, at [Amazon Web Services], where I manager a team of stellas
+Businesses, [Amazon Web Services] Singapore, where I manager a team of stellas
 [Solutions Architects].
 
 In and out of work, my two favorite activities are to ask "How can we make this
