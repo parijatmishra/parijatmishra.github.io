@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Three Situations Our Brain Works Against Us
+title: Three Situations When Our Brain Works Against Us
 ---
 
 Our brain is out to get us! It often makes bad decisions, by using some mental
