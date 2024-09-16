@@ -7,6 +7,8 @@ Our brain is out to get us! When we have to make critical decisions under
 uncertainty, it uses in appropriate mental shortcuts instead of solid reasoning.
 And we are not even aware that this is happening.
 
+![Brain Fooling Us](/assets/img/brain-fooling-owner-3.jpg)
+
 **Example.**
 
 A software vendor describes their product and points out several benefits that
