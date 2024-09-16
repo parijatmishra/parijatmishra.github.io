@@ -4,7 +4,7 @@ title: Three Situations When Our Brain Works Against Us
 ---
 
 Our brain is out to get us! When we have to make critical decisions under
-uncertainty, it uses in appropriate mental shortcuts instead of solid reasoning.
+uncertainty, it uses inappropriate mental shortcuts instead of solid reasoning.
 And we are not even aware that this is happening.
 
 ![Brain Fooling Us](/assets/img/brain-fooling-owner-3.jpg)
