@@ -40,7 +40,8 @@ miss an opportunity by not buying it.
 
 All the previous questions are about _probability_. There are two ways of
 dealing with probability: intuition, and methodical reasoning. When faced with a
-problem that required methodical reasoning, our brain fools us. It replaces:
+problem that requires methodical reasoning to solve, our brain fools us and uses
+intuition instead. Specifically, it replaces:
 
 1. The harder problem of "how likely?" with the easier "how similar?". Instead
    of anwering, "How likely is my company to belong to the set of companies that
