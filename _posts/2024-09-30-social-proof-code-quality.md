@@ -3,9 +3,9 @@ layout: post
 title: The Social Psychology of Secure Software
 ---
 
-Security breaches are no fun. There's much advice about how to improve security
-that revolves around tools, processes, and prioritization of security. No one
-talks about _social psychology_. Now, what does psychology have to do with
+Security breaches are no fun. There's much advice about how to improve
+cybersecurity that boils down to: products, processes and priorities. No one
+talks about _psychology_. Now, what on earth does psychology have to do with
 cybersecurity?
 
 Organizations are spending a lot of money on security products, to the tune of
@@ -39,7 +39,8 @@ software secure, because developers won't have been co-opted in that pursuit.
 According to NIST, 65% of reported security vulnerabilities were due to
 "avoidable, ordinary programming errors", aka bugs. [^nist-2018]
 
-That means we can reduce security risks by nearly two-thirds simply by eliminating bugs!
+That means we can reduce security risks by nearly two-thirds simply by
+eliminating bugs!
 
 What about the other 35% of issues? They'd be more subtle interactions between
 pieces of code or even different programs, where an individual piece of code
@@ -54,7 +55,9 @@ does not have an obvious bug. To address those, we need a combination of:
    cryptography, secure secret handling, nuances of authentication and
    authorization protocols, and least-privilege principles and techniques.
 
-I am convinced that is your codebase is low-quality, that is, has a lot of technical debt, you won't be able to eliminate simple programming errors or take more advanced steps to improve security.
+I am convinced that if your codebase is low-quality, that is, has a lot of
+technical debt, you won't be able to eliminate simple programming errors or take
+more advanced steps to improve security.
 
 If your codebase has a lot of technical debt:
 
