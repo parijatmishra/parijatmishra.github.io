@@ -3,6 +3,11 @@ layout: post
 title: The Social Psychology of Secure Software
 ---
 
+Security breaches are no fun. There's much advice about how to improve security
+that revolves around tools, processes, and prioritization of security. No one
+talks about _social psychology_. Now, what does psychology have to do with
+cybersecurity?
+
 Organizations are spending a lot of money on security products, to the tune of
 hundreds of billions of dollars. This spend is growing faster than the average
 growth in IT spend. [^idc-2023] Yet, losses due to cybercrime are growing even
@@ -15,7 +20,9 @@ think so. In her keynote at the mWISE Conference 2024, she stated:
 > Technology vendors are building problems into their products, opening doors
 > for attackers.” [^reg-cisa]
 
-How can technology vendors stop "building problems into their products"? Much has been written about how to get development teams to write secure software. Most suggestions boil down to:
+How can technology vendors stop "building problems into their products"? Much
+has been written about how to get development teams to write secure software.
+Most suggestions boil down to:
 
 - Educating developers on secure coding.
 - Automating security issue detection with mandatory quality thresholds.
